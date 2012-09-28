@@ -25,11 +25,11 @@ body {
 #wrapper{width:960px; margin: 0 auto;overflow:hidden;}
 #head{margin: 0 auto;overflow:hidden;}
 #content{width:960px; margin: 5px auto; overflow:hidden}
-#footer{margin: 0 auto;overflow:hidden;}
+#footer{width:960px;margin: 0 auto;overflow:hidden;}
 .top_head{
-	height:150px;
+	height:90px;
 	width:960px;
-	no-repeat scroll 0 0 transparent;
+	background: url(../image/top.png) no-repeat scroll 0 0 transparent;
     margin: 0px auto 0;
 }
 .footline {
@@ -40,7 +40,6 @@ body {
 .footer_menu {
     line-height: 26px;
     text-align: center;
-    width: 960px;
 }
 .footer_menu span {
     padding: 0 10px;
@@ -125,13 +124,14 @@ a { text-decoration:none;}
 .menu_bg {
 	width: 800px;
 	position: relative;
+	z-index:-100;
 }
 .menu_bg_r {
 	background: url(../image/top.gif) no-repeat scroll -102px -68px;
 	width: 158px;
 	height: 37px;
 	position: relative;
-	z-index: 10;
+	z-index:-100;
 }
 .menu_bg li {
 	width: 100px;
@@ -211,6 +211,141 @@ a { text-decoration:none;}
 	border:none;
 	cursor:pointer;
 }
+#wrap {
+    background: url("../image/wrap.jpg") no-repeat scroll 0 0 transparent;
+    display: inline;
+    float: right;
+    height: 763px;
+    margin: 5px 0 0 5px;
+    position: relative;
+    width: 396px;
+	overflow:hidden;
+}
+.wel_3g {
+    font-size: 14px;
+    padding-top: 108px;
+    text-align: center;
+}
+#wrap_content {
+    height: 482px;
+    left: 29px;
+    overflow-x: hidden;
+    position: absolute;
+    top: 137px;
+    width: 340px;
+}
+.index_left{
+    float:left; 
+	width:540px;
+	margin: 5px 0 0 0px;
+}
+.headsearch{
+    float:right; 
+	position: absolute;
+	margin: 30px 0 0 500px;
+	z-index:1;
+}
+.select_box{float:right;}
+.select_box .select_choose{ background:url(../image/search_select.gif) no-repeat; height:30px; line-height:30px; width:98px; text-align:center; cursor:default;}
+.select_outer{ background:url(../image/search_select_bt.gif) left bottom no-repeat;  padding-bottom:4px; top:30px; left:0; width:98px;}
+.select_outer ul{ background:url(../image/search_select_line.gif) repeat-y; padding:5px 5px 0 5px;}
+.select_outer ul li{ text-align:center;}
+.select_outer ul li a{ height:20px; line-height:20px; display:block;}
+.select_outer ul li a:hover{ background:#e2eeee; color:#0093ff; text-decoration:none; border-radius:3px;}
+.select_box,.search_input,.searchbtn,.advanced_s{ float:left;}
+.search_input{ background:url(../image/search_input.gif) no-repeat; height:30px; padding-top:4px;width:263px;}
+.search_input input{ border:none!important; background:none!important; width:262px;}
+.searchbtn{ background:url(../image/search_btn.gif) no-repeat; border:none; width:74px; height:30px; text-indent:-999em; cursor:pointer;}
+
+/*最近公告*/
+.right_column {
+	width: 270px;
+	margin:5px -12px 5px 0px;
+}
+.right_column_bg1 {
+	background: url(../image/public_bg1.gif) no-repeat;
+	width: 2px;
+	height: 26px;
+	float: left;
+}
+
+.right_column_bg2 {
+	background: url(../image/public_bg2.gif) no-repeat;
+	width: 2px;
+	height: 26px;
+	float: right;
+}
+
+.right_column_bg3 {
+	background: url(../image/public_bg3.gif) repeat-x;
+	width: 261px;
+	height: 21px;
+	float: left;
+	padding: 5px 0 0px 5px;
+}
+
+.right_column_line1 {
+	width: 268px;
+	border-top: solid 1px #bbddf8;
+	float: left;
+	border-left: solid 1px #bbddf8;
+	border-right: solid 1px #bbddf8;
+}
+
+.right_column_bg4 {
+	background: url(../image/public_bg4.gif) no-repeat;
+	width: 2px;
+	height: 2px;
+	float: left;
+	overflow:hidden;
+}
+
+.right_column_bg5 {
+	background: url(../image/public_bg5.gif) no-repeat;
+	width: 2px;
+	height: 2px;
+	float: right;
+	overflow:hidden;
+}
+
+.right_column_line2 {
+	border-top: solid 1px #bbddf8;
+	float: left;
+	width: 266px;
+	height: 0px;
+	margin-top: 1px;
+	overflow:hidden;
+}
+
+.right_column_list {
+	margin-left: 5px;
+	width: 210px;
+}
+
+.right_column_list a {
+	float: left;
+	width: 170px;
+	text-align: left;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+.right_column_list span {
+	float: right;
+	color: #fe8c1a;
+}
+.middle_ad li {
+    border: 1px solid #bbddf8;
+    border-radius: 1px 1px 1px 1px;
+    height: 60px;
+    margin-top: 2px;
+	margin-right: 2px;
+    overflow: hidden;
+    padding: 1px;
+    width: 154px;
+	float: left;
+}
+
 
 
 

@@ -1,0 +1,22 @@
+h2 {
+    color: #017CC8;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.curriculum_more {
+    background: url("../image/more.png") no-repeat scroll transparent;
+    cursor: pointer;
+    height: 14px;
+    width: 42px;
+	margin-top:6px;
+}
+
+.list_b {
+    background: url("../image/icon.gif") no-repeat scroll -90px -80px transparent;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 4px;
+    overflow: hidden;
+    padding: 0 0 0 15px;
+}

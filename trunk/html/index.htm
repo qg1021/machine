@@ -9,16 +9,46 @@
 	<link href= "favicon.ico" rel= "Bookmark ">
 	<link href="css/master.css" rel="stylesheet" type="text/css" /> 
 	<title>农机销售信息网</title>
-	<script>
-
-
-	</script> 
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.fn.imgplayer.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#search_popup').bind({
+			mouseover:function() {
+				$('#search_popup').show();
+			},
+			mouseout:function() {
+				$('#search_popup').hide();
+			}
+		});
+	});
+</script>
+	 
 
 </head>
 <body>
 <div id="wrapper">
     <div id="header">
-		<div  class="top_head"><a href="index.htm"><img border="0"  alt="农机销售信息网" src="image/top.png"/></a></div>
+		<div  class="top_head">
+			<div class="rr headsearch" >
+				<div class="select_box">
+						<p class="select_choose"  onmouseover="$('#search_popup').show();" onmouseout="$('#search_popup').hide();">企 业</p>
+						<div id="search_popup" class="select_outer" style="display:none">
+							<ul>
+								<li><a href="#">品 牌</a></li>
+								<li><a href="#">技 术</a></li>
+								<li><a href="#">资 讯</a></li>
+								<li><a href="#">展 会</a></li>
+								<li><a href="#">招 聘</a></li>
+							</ul>
+						</div>
+				</div>
+				<div class="search_input">
+						<input type="text" />
+				</div>
+				<button type="submit" class="searchbtn">搜索</button>
+			</div>
+		</div>
 		<div id="menu">
 				<div class="menu_bg_l ll"></div>
                 <div class="menu_bg ll">
@@ -47,8 +77,129 @@
         </div>
 	</div>
 	<div id="content">
-		
-		112222122221222
+		<div class="index_left">
+			<div id="imgplayer" class="ll"  style="display:none;">
+				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="许晴留恋伦敦街头"><img src="demo/1.jpg" title="许晴留恋伦敦街头" /></a>
+				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="体验伦敦人的生活方式"><img src="demo/2.jpg" title="体验伦敦人的生活方式" /></a>
+				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="田园午后许晴性感妖娆"><img src="demo/3.jpg" title="田园午后许晴性感妖娆" /></a>
+				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="许晴的街头回眸"><img src="demo/4.jpg" title="许晴的街头回眸" /></a>
+				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="许晴红衣加身畅游伦敦"><img src="demo/5.jpg" title="许晴红衣加身畅游伦敦" /></a>
+				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="许晴流连于雨后的伦敦，笑靥如花"><img src="demo/6.jpg" title="许晴流连于雨后的伦敦，笑靥如花" /></a>
+				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="许晴伦敦街头换丝袜"><img src="demo/7.jpg" title="许晴伦敦街头换丝袜" /></a>
+				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="许晴恬静淡然街边赏花"><img src="demo/8.jpg" title="许晴恬静淡然街边赏花" /></a>
+				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="许晴恬静柔美似东方版“赫本”"><img src="demo/9.jpg" title="许晴恬静柔美似东方版“赫本”" /></a>
+				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="许晴甜美笑容魅力眼神"><img src="demo/10.jpg" title="许晴甜美笑容魅力眼神" /></a>
+			</div>
+			<p class="clearb"></p>
+			<div class="ll right_column">
+					<div class="right_column_bg1"> </div>
+					<div class="right_column_bg3">
+						<h2 class="ll">最近公告</h2>
+						<div class="curriculum_more rr mr5"> </div>
+					</div>
+					<div class="right_column_bg2"> </div>
+					<div class="right_column_line1">
+						  <ul class="right_column_list">
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积增用户积增用户积增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用网新增用户网新增用户网新增用户户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增网新增用户网新增用户用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增网新增用户网新增用户用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增网新增用户网新增用户用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+						  </ul>
+					</div>
+					<div class="right_column_bg4"> </div>
+					<div class="right_column_line2"> </div>
+					<div class="right_column_bg5"> </div>
+					<div class="del_float"> </div>
+			</div>
+
+			<div class="rr right_column">
+					<div class="right_column_bg1"> </div>
+					<div class="right_column_bg3">
+						<h2 class="ll">最近公告</h2>
+						<a href="http://www.baidu.com" target="_blank"><div class="curriculum_more rr mr5"> </div></a>
+					</div>
+					<div class="right_column_bg2"> </div>
+					<div class="right_column_line1">
+						  <ul class="right_column_list">
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积增用户积增用户积增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用网新增用户网新增用户网新增用户户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增网新增用户网新增用户用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增网新增用户网新增用户用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增网新增用户网新增用户用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
+						  </ul>
+					</div>
+					<div class="right_column_bg4"> </div>
+					<div class="right_column_line2"> </div>
+					<div class="right_column_bg5"> </div>
+					<div class="del_float"> </div>
+			</div>
+		</div>
+		<div class="rr" style="width:400px;">
+			<div id="wrap">
+				<div class="wel_3g">欢迎访问3G门户炫版: xuan.3g.cn</div>
+				<iframe id="wrap_content" scrolling="yes" frameborder="0" src="http://xuan.3g.cn"></iframe>
+			</div>
+		</div>
+		<p class="clearb"></p>
+		<div title="中间广告位显示">
+			<ul class="middle_ad">
+				<li>
+					<a title="农林竹网" href="http://w16w16.51.net/" target="_blank">
+						<img width="154" height="60" border="0" src="http://www.crafts-bamboo.com/upload/image/201209/im1347976193518770.gif">
+					</a>
+				</li>
+				<li>
+					<a title="欧林雅" href="http://www.csoly.com/" target="_blank">
+						<img width="154" height="60" border="0" src="http://www.crafts-bamboo.com/upload/image/201209/im1347976467875986.gif">
+					</a>
+				</li>
+				<li>
+					<a title="九木堂" href="http://www.yafeng-shanyou.com/" target="_blank">
+						<img width="154" height="60" border="0" src="http://www.crafts-bamboo.com/upload/image/201209/im1347976592681588.gif">
+					</a>
+				</li>
+				<li>
+					<a title="竹原料采购平台" href="http://www.zgzm114.com" target="_blank">
+						<img width="154" height="60" border="0" src="http://www.crafts-bamboo.com/upload/image/201209/im1347976653479438.gif">
+					</a>
+				</li>
+				<li>
+					<a title="安吉万利达" href="http://www.cnwanlida.com/" target="_blank">
+						<img width="154" height="60" border="0" src="http://www.crafts-bamboo.com/upload/image/201209/im1348066352553370.gif">
+					</a>
+				</li>
+				<li>
+					<a title="同顺企业" href="http://www.tongsoon.com/" target="_blank">
+						<img width="154" height="60" border="0" src="http://www.crafts-bamboo.com/upload/image/201209/im1348066431220179.gif">
+					</a>
+				</li>
+			</ul>		
+		</div>
 	</div>
 	<div id="footer">
 			<div  class="footline"></div>
@@ -72,5 +223,12 @@
 			</div>
 		</div>
 </div>
+<script type="text/javascript">
+		$("#imgplayer").player({
+			width	: '550px',
+			height  : '320px',
+			showTitle : false
+		}).play();
+</script>
 </body>
 </html>
