@@ -1,5 +1,5 @@
 h2 {
-    color: #017CC8;
+    color: #CC0000;
     font-size: 14px;
     font-weight: bold;
 }
@@ -19,4 +19,276 @@ h2 {
     margin-top: 4px;
     overflow: hidden;
     padding: 0 0 0 15px;
+}
+
+.box_dotline_top {
+    border-top: 1px dotted #bbddf8;
+    padding: 5px 0;
+}
+.buttonbox2 {
+    margin: 15px auto;
+    width: 70px;
+}
+.audit_list {
+
+}
+
+/* 按钮系列  4色 开始 ------------------------------------按钮系列  4色----- */
+/* 蓝色 100px 宽按钮 */
+ .btn_blue_l{
+	background:url(../image/btn.gif) no-repeat 0 -100px;
+	width:98px;
+	height:25px;
+	display:inline-block;
+    border: 0 none;
+    cursor: pointer;
+	color:#fff;
+	vertical-align:middle;
+	}
+ .btn_blue_l:hover {
+	background:url(../image/btn.gif) no-repeat 0 -150px;
+	}
+/* 橙色 100px 宽按钮 */
+ .btn_orange_l{
+	background:url(../image/btn.gif) no-repeat 0 0px;
+	width:98px;
+	height:25px;
+	display:inline-block;
+    border: 0 none;
+    cursor: pointer;
+	color:#fff;
+	vertical-align:middle;
+	}
+ .btn_orange_l:hover {
+	background:url(../image/btn.gif) no-repeat 0 -50px;
+	}
+/* 灰色 100px 宽按钮 */
+ .btn_grey_l{
+	background:url(../image/btn.gif) no-repeat 0 -200px;
+	width:98px;
+	height:25px;
+	display:inline-block;
+    border: 0 none;
+    cursor: pointer;
+	color:#333;
+	vertical-align:middle;
+	}
+ .btn_grey_l:hover {
+	background:url(../image/btn.gif) no-repeat 0 -250px;
+	}
+/* 绿色 100px 宽按钮 */
+ .btn_green_l{
+	background:url(../image/btn.gif) no-repeat 0 -300px;
+	width:98px;
+	height:25px;
+	display:inline-block;
+    border: 0 none;
+    cursor: pointer;
+	color:#fff;
+	}
+ .btn_green_l:hover {
+	background:url(../image/btn.gif) no-repeat 0 -350px;
+	}
+
+
+
+
+/* 蓝色 70px 宽按钮 */
+ .btn_blue_s{
+	background:url(../image/btn.gif) no-repeat -150px -100px;
+	width:70px;
+	height:25px;
+	display:inline-block;
+    border: 0 none;
+    cursor: pointer;
+	color:#fff;
+	vertical-align:middle;
+	}
+ .btn_blue_s:hover {
+	background:url(../image/btn.gif) no-repeat -150px -150px;
+	}
+/* 橙色 70px 宽按钮 */
+ .btn_orange_s{
+	background:url(../image/btn.gif) no-repeat -150px 0px;
+	width:70px;
+	height:25px;
+	display:inline-block;
+    border: 0 none;
+    cursor: pointer;
+	color:#fff;
+	vertical-align:middle;
+	}
+ .btn_orange_s:hover {
+	background:url(../image/btn.gif) no-repeat -150px -50px;
+	}
+/* 灰色 70px 宽按钮 */
+ .btn_grey_s{
+	background:url(../image/btn.gif) no-repeat -150px -200px;
+	width:70px;
+	height:25px;
+	display:inline-block;
+    border: 0 none;
+    cursor: pointer;
+	color:#333;
+	vertical-align: middle;
+	}
+ .btn_grey_s:hover {
+	background:url(../image/btn.gif) no-repeat -150px -250px;
+	}
+/* 绿色 70px 宽按钮 */
+ .btn_green_s{
+	background:url(../image/btn.gif) no-repeat -150px -300px;
+	width:70px;
+	height:25px;
+	display:inline-block;
+    border: 0 none;
+    cursor: pointer;
+	color:#fff;
+	}
+ .btn_green_s:hover {
+	background:url(../image/btn.gif) no-repeat -150px -350px;
+	}
+	
+
+	
+/* 按钮系列  4色  结束 --------------------------------------------------------------- */
+.column_box {
+    padding: 5px;
+}
+/********************************* content style **********************************/
+
+.leftmenu{
+	width:182px;
+	float:left;
+}
+.right_shell {
+    float: right;
+    width: 770px;
+}
+
+.block{
+	margin:0 auto 10px; 
+}
+.menu1{
+	border:2px solid #c4dff0;
+	line-height:30px;
+	height:30px;
+	width:180px;
+	margin:0 auto;
+	text-indent:24px;
+	color:#017cc8;
+	background:url(../image/icon_backend.gif) no-repeat scroll -4px 0;
+	background-color:#f7f9fa;
+	font-weight:bold;
+}
+
+.block ul{
+	width:170px;
+	margin:0 auto;
+}
+
+.menu2{
+		color:#666
+}
+
+.menu2 li{
+	line-height:25px;
+	height:25px;
+	text-indent:30px;
+	background:url(../image/icon_backend.gif) no-repeat scroll 0 -30px;
+	cursor:pointer;
+}
+
+.menu2 li a{
+	color:#666;
+}
+
+.menu2 li a:hover{	
+		color:#017cc8;
+		text-decoration:none;
+}
+.menu2 .sel_menu{
+	    font-weight:bold;
+		background:url(../image/icon_backend.gif) no-repeat scroll 0 -50px;
+}
+
+.menu2 .sel_menu a{
+
+		color:#017cc8;
+}
+
+.menu_cbg {
+    background-color: #F7F9FA;
+    color: #017CC9;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    text-indent: 20px;
+    margin-bottom: 5px;
+	width:100%;
+}
+.box_solid_bottom {
+    border-bottom: 1px solid #017CC8;
+    padding: 5px 0;
+}
+.mb10 {
+    margin-bottom: 10px;
+}
+.box_search {
+    background: none repeat scroll 0 0 #F7F9FA;
+    border: 1px solid #BBDDF8;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 5px 10px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.tablebox {
+    margin-bottom: 10px;
+    width: 100%;
+}
+.tablebox tr th {
+    background: none repeat scroll 0 0 #F7F9FA;
+    border: 1px solid #BBDDF8;
+    padding: 5px;
+    text-align: center;
+}
+.tablebox tr td {
+    border: 1px solid #BBDDF8;
+    line-height: 18px;
+    padding: 5px;
+    text-align: center;
+}
+.pagernumber {
+    clear: both;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+}
+.pagernumber a {
+    color: #666666;
+    font-family: arial;
+    font-size: 12px;
+    height: 15px;
+    line-height: 15px;
+    overflow: hidden;
+    padding: 2px 6px;
+    text-decoration: none;
+}
+.pagernumber a:hover {
+    background: none repeat scroll 0 0  #017CC8;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.pagenum_cur {
+    background: none repeat scroll 0 0  #017CC8;
+    color: #FFFFFF !important;
+}
+.button_div {
+    float:left;
+	margin-bottom: 3px;
 }

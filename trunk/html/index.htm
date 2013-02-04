@@ -5,13 +5,18 @@
 	<meta http-equiv="Cache-Control" content="no-store"/>
 	<meta http-equiv="Pragma" content="no-cache"/>
 	<meta http-equiv="Expires" content="0"/>
+	<meta content="index" name="menu" />
 	<link href="favicon.ico" rel="SHORTCUT ICON" />
 	<link href= "favicon.ico" rel= "Bookmark ">
 	<link href="css/master.css" rel="stylesheet" type="text/css" /> 
+	<link href="css/leftmenu.css" rel="stylesheet" type="text/css" /> 
 	<title>农机销售信息网</title>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/jquery.fn.imgplayer.js"></script>
+	<script type="text/javascript" src="js/menu1.js"></script>
 	<script type="text/javascript">
+	var curMenuName = null;
+	var didplayCurMenu = true;
 	$(document).ready(function() {
 		$('#search_popup').bind({
 			mouseover:function() {
@@ -21,25 +26,96 @@
 				$('#search_popup').hide();
 			}
 		});
+		$('a[name="one_menu"]').bind({
+			mouseover:function() {
+				hideOthers();
+				//var submenu_id = this.id+"_sub";
+				//$('#'+submenu_id).show();
+				this.className="nav_hover";
+				didplayCurMenu = false;
+			},
+			mouseout:function() {
+				this.className = "";
+				hiddenMenu(this.id);
+			}
+		});
+		curMenuName = $('meta[name="menu"]').attr("content");
+		timeoutDidplayCurMenu();
+		handleclick(curMenuName);
+		
 	});
+	function timeoutDidplayCurMenu(){
+		window.setTimeout("displayCurMenu()",500);
+	}
+	function displayCurMenu(){
+		if(!didplayCurMenu)return;
+		$('#'+curMenuName).attr('className','nav_hover');
+	}
+	function hiddenMenu(objid){
+		var submenu_id = objid+"_sub";
+		$('#'+submenu_id).hide();
+		$('#'+objid).attr('className','');
+		didplayCurMenu = true;
+		timeoutDidplayCurMenu();
+	}
+
+	function handleover(parentMenuid){	
+		//$('#'+parentMenuid+'_sub').show();
+		$('#'+parentMenuid).attr('className','nav_hover');
+		didplayCurMenu = false;
+	}
+
+	function handleclick(parentMenuid){	
+		//$('#'+parentMenuid+'_sub').hide();
+		$('#'+parentMenuid).attr('className','nav_hover');
+		didplayCurMenu = true;
+	}
+	//先隐藏其他的
+	function hideOthers(){
+		$('#index').attr('className','');
+		$('#company').attr('className','');
+		$('#brand').attr('className','');
+		$('#datainfo').attr('className','');		
+		$('#news').attr('className','');
+		$('#conference').attr('className','');
+		$('#job').attr('className','');	
+		$('#business').attr('className','');		
+	}
+	function onSetText(text){
+		$("#select_text").text(text);
+	}
 </script>
 	 
 
 </head>
 <body>
+<div id="topbg">
+<div id="minnav">
+	<div class="ll">
+		<marquee direction="right" scrollamount="3" scrolldelay="30" width="640" height="15"><span class="tip">农机销售门户，欢迎您！</span></marquee>
+	</div>
+	<div class="links">
+		<a style="outline:none;blr:expression(this.onFocus=this.blur())">首 页</a>  |
+		<a style="outline:none;blr:expression(this.onFocus=this.blur())" onclick="javascript:setHomepage('http://www.machine-sell.com/');">设为首页</a>  | 
+		<a href="javascript:void(0);" onclick="addFavor('http://www.machine-sell.com/', '农机销售门户')" style="outline:none;blr:expression(this.onFocus=this.blur())">加入收藏</a> 
+	</div>
+</div>
+</div>
 <div id="wrapper">
     <div id="header">
 		<div  class="top_head">
 			<div class="rr headsearch" >
 				<div class="select_box">
-						<p class="select_choose"  onmouseover="$('#search_popup').show();" onmouseout="$('#search_popup').hide();">企 业</p>
+						<p id="select_text" class="select_choose"  onmouseover="$('#search_popup').show();" onmouseout="$('#search_popup').hide();">企业</p>
 						<div id="search_popup" class="select_outer" style="display:none">
 							<ul>
-								<li><a href="#">品 牌</a></li>
-								<li><a href="#">技 术</a></li>
-								<li><a href="#">资 讯</a></li>
-								<li><a href="#">展 会</a></li>
-								<li><a href="#">招 聘</a></li>
+								<li><a href="#" onclick="onSetText('企 业');">企 业</a></li>
+								<li><a href="#" onclick="onSetText('品 牌');">品 牌</a></li>
+								<li><a href="#" onclick="onSetText('技 术');">技 术</a></li>
+								<li><a href="#" onclick="onSetText('资 讯');">资 讯</a></li>
+								<li><a href="#" onclick="onSetText('展 会');">展 会</a></li>
+								<li><a href="#" onclick="onSetText('招 聘');">招 聘</a></li>
+								<li><a href="#" onclick="onSetText('招 商');">招 商</a></li>
 							</ul>
 						</div>
 				</div>
@@ -53,14 +129,14 @@
 				<div class="menu_bg_l ll"></div>
                 <div class="menu_bg ll">
                     <ul>
-                        <li class="ll"><a title="首页" href="#" class="nav_hover">首 页</a></li>
-                        <li class="ll"><a title="企业大全" href="#">企业大全</a></li>
-                        <li class="ll"><a title="品牌展示" href="#">品牌展示</a></li>
-                        <li class="ll"><a title="技术资料" href="#">技术资料</a></li>
-                        <li class="ll"><a title="资讯行情" href="#">资讯行情</a></li>
-						<li class="ll"><a title="展会信息" href="#">展会信息</a></li>
-                        <li class="ll"><a title="人才招聘" href="#">人才招聘</a></li>
-                        <li class="ll"><a title="东方红" href="#">东方红</a></li>
+                        <li class="ll"><a  title="首页" id="index" name="one_menu" href="index.htm">首 页</a></li>
+                        <li class="ll"><a  title="企业大全" id="company" name="one_menu" href="company.htm">企业大全</a></li>
+                        <li class="ll"><a  title="品牌展示" id="brand" name="one_menu" href="brand.htm">品牌商城</a></li>
+                        <li class="ll"><a  title="技术资料" id="datainfo" name="one_menu" href="datainfo.htm">技术资料</a></li>
+                        <li class="ll"><a  title="资讯行情" id="news" name="one_menu" href="news.htm">资讯行情</a></li>
+						<li class="ll"><a  title="展会信息" id="conference" name="one_menu" href="#">展会信息</a></li>
+                        <li class="ll"><a  title="人才招聘" id="job" name="one_menu" href="#">人才招聘</a></li>
+                        <li class="ll"><a  title="招商合作" id="business" name="one_menu" href="#">招商合作</a></li>
                     </ul>
                 </div>
                 <div class="menu_bg_r ll">
@@ -69,100 +145,264 @@
 				<!--the beginning of menu_bottom-->
 				<div class="bottom_nav ll">
 					<div class="loginbox ll">
-						<input type="submit" class="log_btn" value="">
-						<input type="submit" class="reg_btn" value="">  
+						<input type="button" class="log_btn" value="" onclick="location.href='login.htm'">
+						<input type="submit" class="reg_btn" value="" onclick="location.href='reg.htm'">  
 					</div>
 				</div>
 				<!--the end of menu_bottom-->
         </div>
 	</div>
 	<div id="content">
-		<div class="index_left">
-			<div id="imgplayer" class="ll"  style="display:none;">
-				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="许晴留恋伦敦街头"><img src="demo/1.jpg" title="许晴留恋伦敦街头" /></a>
-				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="体验伦敦人的生活方式"><img src="demo/2.jpg" title="体验伦敦人的生活方式" /></a>
-				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="田园午后许晴性感妖娆"><img src="demo/3.jpg" title="田园午后许晴性感妖娆" /></a>
-				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="许晴的街头回眸"><img src="demo/4.jpg" title="许晴的街头回眸" /></a>
-				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="许晴红衣加身畅游伦敦"><img src="demo/5.jpg" title="许晴红衣加身畅游伦敦" /></a>
-				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="许晴流连于雨后的伦敦，笑靥如花"><img src="demo/6.jpg" title="许晴流连于雨后的伦敦，笑靥如花" /></a>
-				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="许晴伦敦街头换丝袜"><img src="demo/7.jpg" title="许晴伦敦街头换丝袜" /></a>
-				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="许晴恬静淡然街边赏花"><img src="demo/8.jpg" title="许晴恬静淡然街边赏花" /></a>
-				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="许晴恬静柔美似东方版“赫本”"><img src="demo/9.jpg" title="许晴恬静柔美似东方版“赫本”" /></a>
-				<a href="http://blog.csdn.net/xxd851116" target="_blank" title="许晴甜美笑容魅力眼神"><img src="demo/10.jpg" title="许晴甜美笑容魅力眼神" /></a>
-			</div>
-			<p class="clearb"></p>
-			<div class="ll right_column">
-					<div class="right_column_bg1"> </div>
-					<div class="right_column_bg3">
-						<h2 class="ll">最近公告</h2>
-						<div class="curriculum_more rr mr5"> </div>
-					</div>
-					<div class="right_column_bg2"> </div>
-					<div class="right_column_line1">
-						  <ul class="right_column_list">
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积增用户积增用户积增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用网新增用户网新增用户网新增用户户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增网新增用户网新增用户用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增网新增用户网新增用户用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增网新增用户网新增用户用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-						  </ul>
-					</div>
-					<div class="right_column_bg4"> </div>
-					<div class="right_column_line2"> </div>
-					<div class="right_column_bg5"> </div>
-					<div class="del_float"> </div>
-			</div>
-
-			<div class="rr right_column">
-					<div class="right_column_bg1"> </div>
-					<div class="right_column_bg3">
-						<h2 class="ll">最近公告</h2>
-						<a href="http://www.baidu.com" target="_blank"><div class="curriculum_more rr mr5"> </div></a>
-					</div>
-					<div class="right_column_bg2"> </div>
-					<div class="right_column_line1">
-						  <ul class="right_column_list">
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积增用户积增用户积增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用网新增用户网新增用户网新增用户户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增网新增用户网新增用户用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增网新增用户网新增用户用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增网新增用户网新增用户用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-							<li class="list_b"><a class="ellipsis" href="#">上海终身学习网新增用户积</a></li>
-						  </ul>
-					</div>
-					<div class="right_column_bg4"> </div>
-					<div class="right_column_line2"> </div>
-					<div class="right_column_bg5"> </div>
-					<div class="del_float"> </div>
+		<div style="margin-top:3px;margin-bottom:3px;"><a href="http://www.nongji360.com/zt/butie2012/" target="_blank"><img src="image/201203081126216239.gif"/></a></div>
+		<p class="clearb"></p>
+		<div class="ll box">
+			<div class="allsort">
+				<div class="mt"><strong><a href="#">全部商品分类</a></strong></div>
+					<div class="mc">
+						<div class="item fore">
+							<span><h3><a href="#">家用电器、汽车用品</a></h3><s></s></span>
+							<div class="i-mc">
+								<div class="subitem">
+									<dl class="fore">
+									<dt><A href="#">大 家 电</A></dt>
+									<DD><EM><A href="#">空调</A></EM>
+									  <EM><A href="#">冰箱</A></EM>
+									  <EM><A href="#">平板电视</A></EM>
+									  <EM><A href="#">家电配件</A></EM>
+									  <EM><A href="#">热水器</A></EM>
+									  <EM><A href="#">洗衣机</A></EM>
+									  <EM><A href="#">消毒柜</A></EM>
+									  <EM><A href="#">烟机/灶具</A></EM>
+									  <EM><A href="#">更多&gt;&gt;</A></EM>
+									</DD>
+									</dl>
+									<dl class="fore">
+									<dt><A href="#">大 家 电</A></dt>
+									<DD><EM><A href="#">空调</A></EM>
+									  <EM><A href="#">冰箱</A></EM>
+									  <EM><A href="#">平板电视</A></EM>
+									  <EM><A href="#">家电配件</A></EM>
+									  <EM><A href="#">热水器</A></EM>
+									  <EM><A href="#">洗衣机</A></EM>
+									  <EM><A href="#">消毒柜</A></EM>
+									  <EM><A href="#">烟机/灶具</A></EM>
+									  <EM><A href="#">更多&gt;&gt;</A></EM>
+									</DD>
+									</dl>
+									<dl class="fore">
+									<dt><A href="#">大 家 电</A></dt>
+									<DD><EM><A href="#">空调</A></EM>
+									  <EM><A href="#">冰箱</A></EM>
+									  <EM><A href="#">平板电视</A></EM>
+									  <EM><A href="#">家电配件</A></EM>
+									  <EM><A href="#">热水器</A></EM>
+									  <EM><A href="#">洗衣机</A></EM>
+									  <EM><A href="#">消毒柜</A></EM>
+									  <EM><A href="#">烟机/灶具</A></EM>
+									  <EM><A href="#">更多&gt;&gt;</A></EM>
+									</DD>
+									</dl>
+								</div>
+							</div>
+						</div>
+						
+						<div class="item fore">
+							<span><h3><a href="#">家用电器、汽车用品</a></h3><s></s></span>
+							<div class="i-mc">
+								<div class="subitem">
+									<dl class="fore">
+									<dt><A href="#">大 家 电</A></dt>
+									<DD><EM><A href="#">空调</A></EM>
+									  <EM><A href="#">冰箱</A></EM>
+									  <EM><A href="#">平板电视</A></EM>
+									  <EM><A href="#">家电配件</A></EM>
+									  <EM><A href="#">热水器</A></EM>
+									  <EM><A href="#">洗衣机</A></EM>
+									  <EM><A href="#">消毒柜</A></EM>
+									  <EM><A href="#">烟机/灶具</A></EM>
+									  <EM><A href="#">更多&gt;&gt;</A></EM>
+									</DD>
+									</dl>
+									<dl class="fore">
+									<dt><A href="#">大 家 电</A></dt>
+									<DD><EM><A href="#">空调</A></EM>
+									  <EM><A href="#">冰箱</A></EM>
+									  <EM><A href="#">平板电视</A></EM>
+									  <EM><A href="#">家电配件</A></EM>
+									  <EM><A href="#">热水器</A></EM>
+									  <EM><A href="#">洗衣机</A></EM>
+									  <EM><A href="#">消毒柜</A></EM>
+									  <EM><A href="#">烟机/灶具</A></EM>
+									  <EM><A href="#">更多&gt;&gt;</A></EM>
+									</DD>
+									</dl>
+									<dl class="fore">
+									<dt><A href="#">大 家 电</A></dt>
+									<DD><EM><A href="#">空调</A></EM>
+									  <EM><A href="#">冰箱</A></EM>
+									  <EM><A href="#">平板电视</A></EM>
+									  <EM><A href="#">家电配件</A></EM>
+									  <EM><A href="#">热水器</A></EM>
+									  <EM><A href="#">洗衣机</A></EM>
+									  <EM><A href="#">消毒柜</A></EM>
+									  <EM><A href="#">烟机/灶具</A></EM>
+									  <EM><A href="#">更多&gt;&gt;</A></EM>
+									</DD>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class=extra><A href="#">全部商品分类</A></div>
+				</div>
 			</div>
 		</div>
-		<div class="rr" style="width:400px;">
-			<div id="wrap">
-				<div class="wel_3g">欢迎访问3G门户炫版: xuan.3g.cn</div>
-				<iframe id="wrap_content" scrolling="yes" frameborder="0" src="http://xuan.3g.cn"></iframe>
+		<div class="ll">
+			<div id="imgplayer"   style="display:none;">
+				<a href="youku.htm" target="_blank" ><img src="demo/1.jpg"  /></a>
+				<a href="youku.htm" target="_blank" ><img src="demo/2.jpg" /></a>
+				<a href="youku.htm" target="_blank" ><img src="demo/3.jpg"  /></a>
+				<a href="youku.htm" target="_blank" ><img src="demo/4.jpg"  /></a>
+				<a href="youku.htm" target="_blank" ><img src="demo/5.gif" /></a>
+				<a href="youku.htm" target="_blank" ><img src="demo/6.jpg"  /></a>
+			</div>
+		</div>	
+			
+		<p class="clearb"></p>
+		<div title="中间广告位显示">
+			<ul class="middle_ad">
+				<li>
+					<a title="农林竹网" href="http://w16w16.51.net/" target="_blank">
+						<img width="154" height="60" border="0" src="demo/a1.gif">
+					</a>
+				</li>
+				<li>
+					<a title="欧林雅" href="http://www.csoly.com/" target="_blank">
+						<img width="154" height="60" border="0" src="demo/a2.gif">
+					</a>
+				</li>
+				<li>
+					<a title="九木堂" href="http://www.yafeng-shanyou.com/" target="_blank">
+						<img width="154" height="60" border="0" src="demo/a3.gif">
+					</a>
+				</li>
+				<li>
+					<a title="竹原料采购平台" href="http://www.zgzm114.com" target="_blank">
+						<img width="154" height="60" border="0" src="demo/a4.gif">
+					</a>
+				</li>
+				<li>
+					<a title="安吉万利达" href="http://www.cnwanlida.com/" target="_blank">
+						<img width="154" height="60" border="0" src="demo/a5.gif">
+					</a>
+				</li>
+				<li>
+					<a title="同顺企业" href="http://www.tongsoon.com/" target="_blank">
+						<img width="154" height="60" border="0" src="demo/a6.gif">
+					</a>
+				</li>
+			</ul>		
+		</div>
+		<p class="clearb"></p>
+		<div title="资讯">
+			<div class="panel_column" style="margin-right:6px;">
+					<div class="panel_column_bg1"> </div>
+					<div class="panel_column_bg3">
+						<h2 class="ll">企业动态</h2>
+						<div class="curriculum_more rr mr5"> </div>
+					</div>
+					<div class="panel_column_bg2"> </div>
+					<div class="panel_column_line1">
+						  <ul class="panel_column_list">
+							<li class="list_b"><a class="ellipsis" href="#">浙江丰利研成新一代超细纤维粉碎机</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">力马2012年度员工旅游记</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">流化床应用于异VC钠干燥</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">低聚糖专用喷雾干燥机开工生产</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">浙江丰利废塑料基复合材料粉体法综合利用装备</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">青岛安成屠宰设备：打造屠宰机械行业的知名品牌</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">提高驾驶员技术素质解决联合收割机跑粮问题</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">农业专家：着力保障主要农产品供给/a></li>
+							<li class="list_b"><a class="ellipsis" href="#">构建特色核心专利技术产品链，参与国际粉体设备市场竞争</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">木屑烘干机 技术创新</a></li>
+						  </ul>
+					</div>
+					<div class="panel_column_bg4"> </div>
+					<div class="panel_column_line2"> </div>
+					<div class="panel_column_bg5"> </div>
+			</div>
+			<div class="panel_column" style="margin-right:6px;">
+					<div class="panel_column_bg1"> </div>
+					<div class="panel_column_bg3">
+						<h2 class="ll">政策法规</h2>
+						<div class="curriculum_more rr mr5"> </div>
+					</div>
+					<div class="panel_column_bg2"> </div>
+					<div class="panel_column_line1">
+						  <ul class="panel_column_list">
+							<li class="list_b"><a class="ellipsis" href="#">卫生部农业部：颁布85种农药</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">农业部办公厅关于做好2012年农机春耕备耕工作的通知</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">《绿色食品标志管理办法(征求意见稿)》意见的通知</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">浙江出台高耗能农机报废经济补偿政策</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">农业部关于印发《农业科技发展“十二五”规划》的通知/a></li>
+							<li class="list_b"><a class="ellipsis" href="#">农业部公布《农业机械实地安全检验办法》</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">江苏减免34项涉企收费</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">农业部关于印发《农业科技发展“十二五”规划》的通知/a></li>
+							<li class="list_b"><a class="ellipsis" href="#">农业部公布《农业机械实地安全检验办法》</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">江苏减免34项涉企收费</a></li>
+						  </ul>
+					</div>
+					<div class="panel_column_bg4"> </div>
+					<div class="panel_column_line2"> </div>
+					<div class="panel_column_bg5"> </div>
+			</div>
+			<div class="panel_column" style="margin-right:6px;">
+					<div class="panel_column_bg1"> </div>
+					<div class="panel_column_bg3">
+						<h2 class="ll">分析预测</h2>
+						<div class="curriculum_more rr mr5"> </div>
+					</div>
+					<div class="panel_column_bg2"> </div>
+					<div class="panel_column_line1">
+						  <ul class="panel_column_list">
+							<li class="list_b"><a class="ellipsis" href="#">插秧机市场疲软原因探究</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上半年拖拉机市场持续坚挺</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">拖拉机出口量价齐跌 国内企业仍要走出去</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">2012年1-8月美国农业机械销售及库存统计</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">农业部：每年有500亿斤粮食因储藏不当损失</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">现代农机合作社将领跑农业机械化发展</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">基地化　机械化　特色化 “三化”并进释放农业生产力/a></li>
+							<li class="list_b"><a class="ellipsis" href="#">《金华市生态循环农业发展“十二五”规划》出炉 生态循环成我市农业今后发展方向</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">插秧机市场疲软原因探究/a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上半年拖拉机市场持续坚挺</a></li>
+						  </ul>
+					</div>
+					<div class="panel_column_bg4"> </div>
+					<div class="panel_column_line2"> </div>
+					<div class="panel_column_bg5"> </div>
+			</div>
+			<div class="panel_column" >
+					<div class="panel_column_bg1"> </div>
+					<div class="panel_column_bg3">
+						<h2 class="ll">人物访谈</h2>
+						<div class="curriculum_more rr mr5"> </div>
+					</div>
+					<div class="panel_column_bg2"> </div>
+					<div class="panel_column_line1">
+						  <ul class="panel_column_list">
+							<li class="list_b"><a class="ellipsis" href="#">农机改造奇人-郭木水</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">感动三夏的故事</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">裴春亮：像种子一样播撒希望</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">谈中国农机如何走向国际化</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">专访：浙江柳林机械有限公司总经理郑春方</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">“农机大王”王志千</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">久生：一位农民工党员的大爱真情</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">大丰徐祥谦：我们要大力发展自走式玉米收获机</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">农机专业合作社是具有强大生命力的社会化服务载体</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">陈海燕：廊坊展会专访</a></li>
+						  </ul>
+					</div>
+					<div class="panel_column_bg4"> </div>
+					<div class="panel_column_line2"> </div>
+					<div class="panel_column_bg5"> </div>
 			</div>
 		</div>
 		<p class="clearb"></p>
@@ -170,35 +410,181 @@
 			<ul class="middle_ad">
 				<li>
 					<a title="农林竹网" href="http://w16w16.51.net/" target="_blank">
-						<img width="154" height="60" border="0" src="http://www.crafts-bamboo.com/upload/image/201209/im1347976193518770.gif">
+						<img width="154" height="60" border="0" src="demo/a8.gif">
 					</a>
 				</li>
 				<li>
 					<a title="欧林雅" href="http://www.csoly.com/" target="_blank">
-						<img width="154" height="60" border="0" src="http://www.crafts-bamboo.com/upload/image/201209/im1347976467875986.gif">
+						<img width="154" height="60" border="0" src="demo/a9.gif">
 					</a>
 				</li>
 				<li>
 					<a title="九木堂" href="http://www.yafeng-shanyou.com/" target="_blank">
-						<img width="154" height="60" border="0" src="http://www.crafts-bamboo.com/upload/image/201209/im1347976592681588.gif">
+						<img width="154" height="60" border="0" src="demo/a10.gif">
 					</a>
 				</li>
 				<li>
 					<a title="竹原料采购平台" href="http://www.zgzm114.com" target="_blank">
-						<img width="154" height="60" border="0" src="http://www.crafts-bamboo.com/upload/image/201209/im1347976653479438.gif">
+						<img width="154" height="60" border="0" src="demo/a11.gif">
 					</a>
 				</li>
 				<li>
 					<a title="安吉万利达" href="http://www.cnwanlida.com/" target="_blank">
-						<img width="154" height="60" border="0" src="http://www.crafts-bamboo.com/upload/image/201209/im1348066352553370.gif">
+						<img width="154" height="60" border="0" src="demo/a12.jpg">
 					</a>
 				</li>
 				<li>
 					<a title="同顺企业" href="http://www.tongsoon.com/" target="_blank">
-						<img width="154" height="60" border="0" src="http://www.crafts-bamboo.com/upload/image/201209/im1348066431220179.gif">
+						<img width="154" height="60" border="0" src="demo/a7.gif">
 					</a>
 				</li>
 			</ul>		
+		</div>
+		<div title="资讯">
+			<div class="panel_column" style="margin-right:6px;">
+					<div class="panel_column_bg1"> </div>
+					<div class="panel_column_bg3">
+						<h2 class="ll">市场行情</h2>
+						<div class="curriculum_more rr mr5"> </div>
+					</div>
+					<div class="panel_column_bg2"> </div>
+					<div class="panel_column_line1">
+						  <ul class="panel_column_list">
+							<li class="list_b"><a class="ellipsis" href="#">《金华市生态循环农业发展“十二五”规划》出炉 生态循环成我市农业今后发展方向</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">插秧机市场疲软原因探究/a></li>
+							<li class="list_b"><a class="ellipsis" href="#">上半年拖拉机市场持续坚挺</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">拖拉机出口量价齐跌 国内企业仍要走出去</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">2012年1-8月美国农业机械销售及库存统计</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">农业部：每年有500亿斤粮食因储藏不当损失</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">现代农机合作社将领跑农业机械化发展</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">基地化　机械化　特色化 “三化”并进释放农业生产力/a></li>
+							<li class="list_b"><a class="ellipsis" href="#">《金华市生态循环农业发展“十二五”规划》出炉 生态循环成我市农业今后发展方向</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">现代农机合作社将领跑农业机械化发展</a></li>
+						  </ul>
+					</div>
+					<div class="panel_column_bg4"> </div>
+					<div class="panel_column_line2"> </div>
+					<div class="panel_column_bg5"> </div>
+			</div>
+			<div class="panel_column" style="margin-right:6px;">
+					<div class="panel_column_bg1"> </div>
+					<div class="panel_column_bg3">
+						<h2 class="ll">农机补贴</h2>
+						<div class="curriculum_more rr mr5"> </div>
+					</div>
+					<div class="panel_column_bg2"> </div>
+					<div class="panel_column_line1">
+						  <ul class="panel_column_list">
+							<li class="list_b"><a class="ellipsis" href="#">安徽农机购置补贴对象抽签仪式火</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">2012年安徽农机购置补贴政策新特点</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">2012农机购置补贴十大新看点</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">我国农业补贴的现状与趋势</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">财政部：力争春耕前兑付补贴资金于农民</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">农财两部部署2012年农机购置补贴实施工作</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">2012年补贴对象不变 补贴标准微调</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">农财两部制定2012年购机补贴《实施指导意见》</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">海南三亚机插秧有补贴</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">全国购机补贴资金实施过八成</a></li>
+						  </ul>
+					</div>
+					<div class="panel_column_bg4"> </div>
+					<div class="panel_column_line2"> </div>
+					<div class="panel_column_bg5"> </div>
+			</div>
+			<div class="panel_column" style="margin-right:6px;">
+					<div class="panel_column_bg1"> </div>
+					<div class="panel_column_bg3">
+						<h2 class="ll">维修保养</h2>
+						<div class="curriculum_more rr mr5"> </div>
+					</div>
+					<div class="panel_column_bg2"> </div>
+					<div class="panel_column_line1">
+						  <ul class="panel_column_list">
+							<li class="list_b"><a class="ellipsis" href="#">手扶插秧机使用与维护保养</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">喷油嘴卡死原因及修理方法</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">旋耕机十大故障的排除</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">联合收割机突性故障的预防</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">如何延长农机轮胎使用寿命</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">水稻联合收割机液压机构故障及排除方法</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">加强轮胎维护保养，延长轮胎使用寿命</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">空气滤清器使用保养五要点</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">农用运输车如何应急维修</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">加强轮胎维护保养，延长轮胎使用寿命</a></li>
+						  </ul>
+					</div>
+					<div class="panel_column_bg4"> </div>
+					<div class="panel_column_line2"> </div>
+					<div class="panel_column_bg5"> </div>
+			</div>
+			<div class="panel_column" >
+					<div class="panel_column_bg1"> </div>
+					<div class="panel_column_bg3">
+						<h2 class="ll">技术应用</h2>
+						<div class="curriculum_more rr mr5"> </div>
+					</div>
+					<div class="panel_column_bg2"> </div>
+					<div class="panel_column_line1">
+						  <ul class="panel_column_list">
+							<li class="list_b"><a class="ellipsis" href="#">柴油机长期超负荷运转害处多</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">农机安全生产十八项注意事项</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">大马力轮式拖拉机的操作要领</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">购机莫忽视产品标识</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">科学合理使用化肥农药发展现代农业</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">插秧机田间作业应该注意什么</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">拖拉机制动失效如何急救？</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">大中型农机具选购有五点</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">新型氮肥成新宠或引领肥料行业新方向</a></li>
+							<li class="list_b"><a class="ellipsis" href="#">拖拉机如何安全通过乡间泥泞道路</a></li>
+						  </ul>
+					</div>
+					<div class="panel_column_bg4"> </div>
+					<div class="panel_column_line2"> </div>
+					<div class="panel_column_bg5"> </div>
+			</div>
+		</div>
+		<div class="link_column">
+			<div class="link_column_bg1"> </div>
+			<div class="link_column_bg3">
+				<h2 class="ll">友情链接</h2>
+			</div>
+			<div class="link_column_bg2"> </div>
+			<div class="link_column_line1">
+				<div class="link_column_list">
+			  <a target="_blank" href="http://www.ebdoor.com">一比多</a>
+			  <a target="_blank" href="http://china.globalhardwares.com">中国五金网</a>
+			  <a target="_blank" href="http://www.ca800.com/">中国自动化网</a>
+			  <a target="_blank" href="http://www.tielu.org">中国铁路网</a>
+			  <a target="_blank" href="http://www.chuandong.com">中国传动网</a>
+			  <a target="_blank" href="http://www.jqw.com">金泉网</a>
+			  <a target="_blank" href="http://www.pack.cn">中国包装网</a>
+			  <a target="_blank" href="http://www.djjk.cn">大家健康网</a>
+			  <a target="_blank" href="http://www.gkong.com">中华工控网</a>
+			   <a target="_blank" href="http://china.ecppn.com">全球塑料制品网</a>
+				<a target="_blank" href="http://www.skxox.com">中国数控信息网</a>
+				<a target="_blank" href="http://www.yellowurl.cn">中国黄页网</a>
+				<a target="_blank" href="http://www.foods1.com">第一食品网</a>
+				<a target="_blank" href="http://www.wjw.cn">全球五金网</a>
+				<a target="_blank" href="http://china.trade2cn.com">诚商网</a>
+				<a target="_blank" href="http://www.gtobal.com">际通宝</a>
+				<a target="_blank" href="http://www.hongchao-dg.cn">模具钢</a>
+				<a target="_blank" href="http://www.qqdcw.com">全球电池网</a>
+				<a target="_blank" href="http://steel.baidajob.com">中国钢铁人才网</a>
+				<a target="_blank" href="http://www.sstjtest.com">试验机</a>
+				<a target="_blank" href="http://www.etlong.com">易龙商务网</a>
+				<a target="_blank" href="http://www.jdol.com.cn">机电在线</a>
+				<a target="_blank" href="http://www.cn-bxg.com">不锈钢</a>
+				<a target="_blank" href="http://www.hxjtdc.com">吊车</a>
+				<a target="_blank" href="http://www.mouldsnet.cn">中国塑料模具网</a>
+				<a target="_blank" href="http://www.famens.com">全球阀门网</a>
+				<a target="_blank" href="http://www.zjxf365.com">浙江消防检测</a>
+				<a target="_blank" href="http://www.ciart.com.cn">杭州少儿美术培训</a>
+				<a target="_blank" href="http://www.hdbzhx.com">烘箱</a>
+				<a target="_blank" href="/link/index.html">更多...</a>
+				</div>
+			</div>
+			<div class="link_column_bg4"> </div>
+			<div class="link_column_line2"> </div>
+			<div class="link_column_bg5"> </div>
 		</div>
 	</div>
 	<div id="footer">
@@ -225,10 +611,12 @@
 </div>
 <script type="text/javascript">
 		$("#imgplayer").player({
-			width	: '550px',
-			height  : '320px',
+			width	: '560px',
+			height  : '240px',
 			showTitle : false
 		}).play();
+$(".allsort").hoverForIE6({current:"allsorthover",delay:200});
+$(".allsort .item").hoverForIE6({delay:150});
 </script>
 </body>
 </html>

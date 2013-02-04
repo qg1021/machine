@@ -20,9 +20,9 @@
 		// Some goloab private constant parameters.
 		var defaultCSS = {
 			size : {'width':'800px','height':'600px'},
-			div : {'position':'relative','border':'1px solid #bbddf8','padding':'0px','fontSize':'12px','overflow':'hidden'},
+			div : {'position':'relative','border':'1px solid #dddddd','padding':'0px','fontSize':'12px','overflow':'hidden'},
 			img	: {'position':'absolute','border':'none','z-index':'0','margin':'0px'},
-			ul	: {'margin':'0px','padding':'0px','z-index':'10','position':'absolute','bottom':'2px','right':'2px','list-style-type':'none'},
+			ul	: {'margin':'0px','padding':'0px','z-index':'5','position':'absolute','bottom':'2px','right':'2px','list-style-type':'none'},
 			li	: {'font-family':'Arial','color':'#FFF','float':'left','border':'1px solid #eee','padding':'2px','width':'15px','height':'15px','text-align':'center','margin-left':'1px','cursor':'pointer','background-color':'#999','font-size':'100%'},
 			title: {'background-color':'#eee','position':'absolute','z-index':'9','line-height':'25px','font-weight':'700','padding':'0 5px','bottom':'0'},
 			liFoucs : {'background-color':'#F00','font-weight':'700'},
@@ -33,6 +33,7 @@
 		
 		var options = $.extend({
 			showTitle	: true, // 标题显示开关，true表示显示标题，默认为true
+			showIndex	: true, // 标题显示开关，true表示显示序号，默认为true
 			width		: '', // 播放器div容器的宽度
 			height		: '', // 播放器div容器的高度
 			time		: 2000,  // 图片播放时间（单张图片播放至切换到下一张图片所要的时间）,单位：毫秒
@@ -74,8 +75,10 @@
 
 		// 生成索引序号
 		var $indexGroups = $("<ul></ul>").css(options.ulCSS);
-		for (var i = 0; i < $images.length; i++) {
-			$indexGroups.append("<li>" + (i + 1) + "</li>");
+		if (options.showIndex) {
+			for (var i = 0; i < $images.length; i++) {
+				$indexGroups.append("<li>" + (i + 1) + "</li>");
+			}
 		}
 		// 获取序号元素的jQuery对象数组
 		var $sn = $indexGroups.appendTo($container).children("li").fadeTo('fast', "0.6");
