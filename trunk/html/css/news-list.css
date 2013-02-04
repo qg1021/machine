@@ -1,0 +1,85 @@
+
+.content {
+    width: 990px;
+}
+.content .mt {
+    background: url("../images/bg_tit_home.gif") repeat-x scroll 0 -128px #E6E6E6;
+    height: 28px;
+    margin-bottom: 5px;
+}
+.content h2 {
+    background: url("../images/bg_tit_home.gif") no-repeat scroll 0 -100px transparent;
+    color: #FFFFFF;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    width: 121px;
+}
+.content .mt .extra {
+    background: url("../images/bg_tit_home.gif") no-repeat scroll -205px -156px transparent;
+    float: right;
+    height: 28px;
+    width: 6px;
+}
+.content .mt .form {
+    float: left;
+    height: 28px;
+    padding-left: 118px;
+    width: 220px;
+}
+.content .mt .text {
+    border: 1px inset #000000;
+    margin: 4px 3px 0 0;
+    padding: 2px;
+    width: 160px;
+}
+.content .mt .btn-search {
+    background: url("../images/bg_hotsale.gif") no-repeat scroll 0 -632px transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 22px;
+    line-height: 22px;
+    margin-top: 3px;
+    text-align: center;
+    width: 50px;
+}
+.content .mc {
+    border: 1px solid #EBEBEB;
+    margin-bottom: 10px;
+}
+.content h5 {
+    background: none repeat scroll 0 0 #F6F6F6;
+    padding: 4px 8px;
+}
+.content h5 span {
+    float: right;
+}
+.content ul {
+    padding: 8px;
+}
+.content li {
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    padding: 3px 0;
+}
+.content li div {
+    float: left;
+    margin-right: 5px;
+}
+.content li span {
+    color: #999999;
+    float: right;
+    margin-left: 5px;
+}
+.content li .line {
+    border-top: 1px dotted #CCCCCC;
+    float: none;
+    height: 10px;
+    margin-top: 11px;
+    overflow: hidden;
+}
+.root61 .content {
+    width: 600px;
+}

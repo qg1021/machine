@@ -1,0 +1,21 @@
+@charset "utf-8";
+.img_box{ width:980px;height:420px;border:5px solid #D00000; background:#ffffff;}
+.img{ width:180px; height:400px;float:left;margin-left:40px;}
+.text_box{width:500px;float:right;}
+.text_box p {margin-bottom:60px;font-family:"微软雅黑"; }
+.tittle{ font-weight:bold;font-size:24px; margin-left:65px;margin-top:20px;line-height:35px;color:#D00000;}
+.text_box_1{font-size:16px; padding:30px 28px; margin-top:60px;}
+.text_box_bnt{padding-left:205px;}
+.button01 input {
+    background: url("../images/new-regist.jpg") no-repeat scroll 0 -31px transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-size: 15px;
+    font-weight: bolder;
+    height: 30px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100px;
+}

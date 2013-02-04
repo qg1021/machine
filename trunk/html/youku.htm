@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>  
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<meta http-equiv="Cache-Control" content="no-store"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta content="index" name="menu" />
+	<link href="favicon.ico" rel="SHORTCUT ICON" />
+	<link href= "favicon.ico" rel= "Bookmark ">
+	<link href="css/master.css" rel="stylesheet" type="text/css" /> 
+	<title>农机销售信息网</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.fn.imgplayer.js"></script>
+	<script type="text/javascript">
+	var curMenuName = null;
+	var didplayCurMenu = true;
+	$(document).ready(function() {
+		$('#search_popup').bind({
+			mouseover:function() {
+				$('#search_popup').show();
+			},
+			mouseout:function() {
+				$('#search_popup').hide();
+			}
+		});
+		$('a[name="one_menu"]').bind({
+			mouseover:function() {
+				hideOthers();
+				//var submenu_id = this.id+"_sub";
+				//$('#'+submenu_id).show();
+				this.className="nav_hover";
+				didplayCurMenu = false;
+			},
+			mouseout:function() {
+				this.className = "";
+				hiddenMenu(this.id);
+			}
+		});
+		curMenuName = $('meta[name="menu"]').attr("content");
+		timeoutDidplayCurMenu();
+		handleclick(curMenuName);
+		
+	});
+	function timeoutDidplayCurMenu(){
+		window.setTimeout("displayCurMenu()",500);
+	}
+	function displayCurMenu(){
+		if(!didplayCurMenu)return;
+		$('#'+curMenuName).attr('className','nav_hover');
+	}
+	function hiddenMenu(objid){
+		var submenu_id = objid+"_sub";
+		$('#'+submenu_id).hide();
+		$('#'+objid).attr('className','');
+		didplayCurMenu = true;
+		timeoutDidplayCurMenu();
+	}
+
+	function handleover(parentMenuid){	
+		//$('#'+parentMenuid+'_sub').show();
+		$('#'+parentMenuid).attr('className','nav_hover');
+		didplayCurMenu = false;
+	}
+
+	function handleclick(parentMenuid){	
+		//$('#'+parentMenuid+'_sub').hide();
+		$('#'+parentMenuid).attr('className','nav_hover');
+		didplayCurMenu = true;
+	}
+	//先隐藏其他的
+	function hideOthers(){
+		$('#index').attr('className','');
+		$('#company').attr('className','');
+		$('#brand').attr('className','');
+		$('#datainfo').attr('className','');		
+		$('#news').attr('className','');
+		$('#conference').attr('className','');
+		$('#job').attr('className','');	
+		$('#business').attr('className','');		
+	}
+	function onSetText(text){
+		$("#select_text").text(text);
+	}
+</script>
+	 
+
+</head>
+<body>
+<div id="topbg">
+<div id="minnav">
+	<div class="ll">
+		<marquee direction="right" scrollamount="3" scrolldelay="30" width="640" height="15"><span class="tip">农机销售门户，欢迎您！</span></marquee>
+	</div>
+	<div class="links">
+		<a style="outline:none;blr:expression(this.onFocus=this.blur())">首 页</a>  |
+		<a style="outline:none;blr:expression(this.onFocus=this.blur())" onclick="javascript:setHomepage('http://www.machine-sell.com/');">设为首页</a>  | 
+		<a href="javascript:void(0);" onclick="addFavor('http://www.machine-sell.com/', '农机销售门户')" style="outline:none;blr:expression(this.onFocus=this.blur())">加入收藏</a> 
+	</div>
+</div>
+</div>
+<div id="wrapper">
+    <div id="header">
+		<div  class="top_head">
+			<div class="rr headsearch" >
+				<div class="select_box">
+						<p id="select_text" class="select_choose"  onmouseover="$('#search_popup').show();" onmouseout="$('#search_popup').hide();">企业</p>
+						<div id="search_popup" class="select_outer" style="display:none">
+							<ul>
+								<li><a href="#" onclick="onSetText('企 业');">企 业</a></li>
+								<li><a href="#" onclick="onSetText('品 牌');">品 牌</a></li>
+								<li><a href="#" onclick="onSetText('技 术');">技 术</a></li>
+								<li><a href="#" onclick="onSetText('资 讯');">资 讯</a></li>
+								<li><a href="#" onclick="onSetText('展 会');">展 会</a></li>
+								<li><a href="#" onclick="onSetText('招 聘');">招 聘</a></li>
+								<li><a href="#" onclick="onSetText('招 商');">招 商</a></li>
+							</ul>
+						</div>
+				</div>
+				<div class="search_input">
+						<input type="text" />
+				</div>
+				<button type="submit" class="searchbtn">搜索</button>
+			</div>
+		</div>
+		<div id="menu">
+				<div class="menu_bg_l ll"></div>
+                <div class="menu_bg ll">
+                    <ul>
+                        <li class="ll"><a  title="首页" id="index" name="one_menu" href="index.htm">首 页</a></li>
+                        <li class="ll"><a  title="企业大全" id="company" name="one_menu" href="company.htm">企业大全</a></li>
+                        <li class="ll"><a  title="品牌展示" id="brand" name="one_menu" href="brand.htm">品牌展示</a></li>
+                        <li class="ll"><a  title="技术资料" id="datainfo" name="one_menu" href="datainfo.htm">技术资料</a></li>
+                        <li class="ll"><a  title="资讯行情" id="news" name="one_menu" href="news.htm">资讯行情</a></li>
+						<li class="ll"><a  title="展会信息" id="conference" name="one_menu" href="#">展会信息</a></li>
+                        <li class="ll"><a  title="人才招聘" id="job" name="one_menu" href="#">人才招聘</a></li>
+                        <li class="ll"><a  title="招商合作" id="business" name="one_menu" href="#">招商合作</a></li>
+                    </ul>
+                </div>
+                <div class="menu_bg_r ll">
+                   
+                </div>              
+				<!--the beginning of menu_bottom-->
+				<div class="bottom_nav ll">
+					<div class="loginbox ll">
+						<input type="button" class="log_btn" value="" onclick="location.href='login.htm'">
+						<input type="submit" class="reg_btn" value="" onclick="location.href='reg.htm'">  
+					</div>
+				</div>
+				<!--the end of menu_bottom-->
+        </div>
+	</div>
+	<div id="content">
+		<embed src="http://player.youku.com/player.php/sid/XMjUzODI0Mjg4/v.swf"  width="960" height="540"  align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" id="movie_player" name="movie_player"  quality="high" allowfullscreen="true" flashvars="isShowRelatedVideo=false&showAd=0&isAutoPlay=true&isDebug=false&UserID=&winType=interior&playMovie=true&MMControl=false&MMout=false&RecordCode=1001,1002,1003,1004,1005,1006,2001,3001,3002,3003,3004,3005,3007,3008,9999" pluginspage=" http://www.macromedia.com/go/getflashplayer"/>
+		
+	</div>
+	<div id="footer">
+			<div  class="footline"></div>
+			<div class="footer_menu mb5"
+				<span><a target="_blank" href="http://www.bamboo.cn/about/index_1.html">关于我们</a></span>
+				|
+				<span><a target="_blank" href="http://www.bamboo.cn/about/index_1.html">法律声明</a></span>
+				|
+				<span><a target="_blank" href="http://www.bamboo.cn/about/index_10.html">友情链接</a></span>
+				|
+				<span><a target="_blank" href="http://www.bamboo.cn/about/index_6.html">联系我们</a></span>
+				|<span><a target="_blank" href="/sitemap.html">广告服务</a></span>
+			</div>
+			<div class="ta_c">
+				<p class="mb5">版权 ©2012  农机销售信息网（<a target="_blank" href="http://www.machine-sell.com">machine-sell.com</a>）所有,  保留所有权利</p>
+				<p class="mb5">
+					<a target="_blank" href="http://net.china.com.cn/index.htm"><img src="image/report.gif"></a>&nbsp;&nbsp;
+					<a target="_blank" href="http://www.pingpinganan.gov.cn/web/index.aspx"><img src="image/110.gif"></a>&nbsp;&nbsp;
+					<a target="_blank" href="http://www.pingpinganan.gov.cn/web/index.aspx"><img src="image/ppaa.gif"></a>&nbsp;&nbsp;
+				</p>
+			</div>
+		</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,850 @@
+.right-extra {
+}
+#f_type {
+    border-top: medium none;
+    margin-bottom: 0;
+    margin-top: -10px;
+    padding: 0 20px 10px;
+}
+#f_type .i-mt {
+    border-bottom: 1px solid #E6E6E6;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 5px;
+}
+#f_type .i-mt h4 {
+    font-size: 12px;
+    font-weight: normal;
+}
+#f_type ul li {
+    float: left;
+    line-height: 22px;
+    margin-right: 10px;
+    white-space: nowrap;
+    word-break: break-all;
+}
+
+.btn-add, .btn-count {
+    background: url("../images/keep.gif") repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 21px;
+    line-height: 100px;
+    margin-bottom: 4px;
+    overflow: hidden;
+}
+#fov01 .operating .btn-add {
+    margin-right: -20px;
+}
+.btn-add {
+    width: 96px;
+}
+.btn-count {
+    background-position: 0 -22px;
+    width: 84px;
+}
+.operating .btn-8 {
+    text-align: center;
+    width: 82px;
+}
+.p-name {
+    height: auto;
+}
+.star {
+    margin-bottom: 3px;
+    margin-top: 2px;
+}
+.sa0, .sa1, .sa2, .sa3, .sa4, .sa5 {
+    background-repeat: no-repeat;
+    height: 12px;
+    overflow: hidden;
+    width: 64px;
+}
+.sa0 {
+    background-position: -65px 0;
+}
+.sa1 {
+    background-position: -52px 0;
+}
+.sa2 {
+    background-position: -39px 0;
+}
+.sa3 {
+    background-position: -26px 0;
+}
+.sa4 {
+    background-position: -13px 0;
+}
+.sa5 {
+    background-position: 0 0;
+}
+.fov-bak .btn-bak {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E6E6E6;
+    display: block;
+    padding: 4px;
+    width: 60px;
+}
+a.btn-bak:link, a.btn-bak:visited, a.btn-bak:hover {
+    color: #999999;
+}
+.mod-bak .text {
+    float: left;
+    margin-right: 5px;
+    width: 130px;
+}
+.mod-bak .btn-12 {
+    margin-right: 5px;
+}
+.b-opera {
+    padding-top: 5px;
+}
+.b-opera .fore1 .check {
+    float: left;
+    margin-top: 5px;
+}
+.b-opera .fore1 label {
+    float: left;
+    margin-top: 3px;
+}
+.b-opera li {
+    float: left;
+    margin-right: 10px;
+}
+#reco {
+    border: 1px solid #E6E6E6;
+    padding-bottom: 10px;
+}
+#reco .mt {
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 6px;
+    padding-left: 15px;
+}
+#reco .mt h2 {
+    color: #CC0000;
+    float: left;
+}
+#reco .mt .extra {
+    padding-right: 10px;
+}
+.reco-l div, .reco-r div {
+    background: url("../images/lr.jpg") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 37px;
+    width: 34px;
+}
+.reco-l {
+    float: left;
+    padding-top: 90px;
+}
+.reco-r {
+    float: right;
+    padding-top: 90px;
+}
+.reco-r div {
+    background-position: -34px 0;
+}
+.i-reco {
+    float: left;
+    width: 704px;
+}
+#reco .mc {
+    height: 228px;
+    overflow: hidden;
+    padding: 0 15px;
+    text-align: center;
+}
+.i-reco .list-h {
+    text-align: center;
+}
+.i-reco .list-h li {
+    float: left;
+    width: 176px;
+}
+.i-reco .list-h li .p-name {
+    height: 3em;
+    padding: 0 10px;
+}
+.i-reco .list-h li .p-name a:link, .i-reco .list-h li .p-name a:visited {
+    color: #222222;
+}
+.i-reco .list-h li .p-img img {
+    display: inline;
+}
+.i-reco .list-h li .extra a {
+    color: #005AA0;
+}
+#help {
+    margin-top: -10px;
+}
+#help .mb {
+    background: url("../images/shrink.gif") repeat scroll 0 -8px transparent;
+    border-top: 1px solid #F1F1F1;
+    cursor: pointer;
+    font-size: 0;
+    height: 11px;
+    line-height: 0;
+    overflow: hidden;
+}
+#help .mb s {
+    background: url("../images/shrink.gif") no-repeat scroll -14px 0 transparent;
+    display: block;
+    height: 7px;
+    margin: 2px auto 0;
+    width: 13px;
+}
+#help .down s {
+    background-position: 0 0;
+}
+#help .mc {
+    padding: 20px;
+}
+#help .i-m p {
+    padding: 10px 0;
+}
+#help .i-m .fore1 {
+    border-bottom: 1px solid #E6E6E6;
+    line-height: 30px;
+}
+#help .i-m .fore1 img {
+    margin: 0 5px;
+}
+#help .i-m {
+    float: left;
+    width: 425px;
+}
+#help .mc .extra {
+    float: right;
+}
+#atte-area {
+    float: left;
+    width: 582px;
+}
+#atte-area .mt {
+    overflow: visible;
+    padding-right: 0;
+}
+#atte-area .mt .extra {
+    position: relative;
+    width: 129px;
+}
+#atte-area .mt .extra .check {
+    margin-top: 9px;
+}
+#atte-area .mt .extra .fore {
+    text-align: center;
+}
+#atte-area .mt .fore h5 {
+    font-weight: normal;
+    height: 27px;
+    line-height: 27px;
+    margin: 0 4px;
+}
+#atte-area .mt .hover .fore h5 {
+    border-bottom: 1px solid #F2F2F2;
+}
+#atte-area .mt .extra .fore b {
+    background: url("../images/keep.gif") no-repeat scroll -34px -65px transparent;
+    font-size: 0;
+    height: 3px;
+    line-height: 0;
+    margin-left: 3px;
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    width: 5px;
+}
+#atte-area .mt .hover .fore b {
+    background-position: -34px -61px;
+    top: 13px;
+}
+#atte-area .mt .hover .fore {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #D7D8DA;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 0;
+}
+#atte-area .mt .hover .fore1 {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #D7D8DA;
+    border-image: none;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    padding: 10px 4px;
+    position: absolute;
+    width: 119px;
+}
+#atte-area .mt .hover ul li {
+    overflow: hidden;
+}
+#atte-area .mc li {
+    border-bottom: 1px dotted #E6E6E6;
+    line-height: 48px;
+    overflow: hidden;
+    padding: 10px;
+}
+#atte-area .mc li .u-icon {
+    float: left;
+    margin-right: 10px;
+}
+#atte-area .mc li .u-icon a {
+    border: 1px solid #E6E6E6;
+    float: left;
+    padding: 3px;
+}
+#atte-area .mc li .u-icon img {
+    height: auto;
+    width: 40px;
+}
+#atte-area .mc .t-info {
+    float: left;
+    height: 48px;
+    overflow: hidden;
+    width: 410px;
+}
+#atte-area .mc .t-info a {
+    margin-right: 8px;
+}
+#atte-area .mc .t-time {
+    color: #999999;
+    float: right;
+}
+.uic-list {
+    overflow: hidden;
+    padding: 0 10px;
+}
+.uic-list li {
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    width: 33.3%;
+}
+.uic-list li img {
+    height: auto;
+    width: 50px;
+}
+#atte-area .hover .fore1 .btns {
+    text-align: center;
+}
+.pt1, .pt2, .pt3, .pt4 {
+    background-image: url("../images/icon_promotion.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    font-size: 0;
+    height: 16px;
+    line-height: 100px;
+    margin: 0 2px -3px;
+    overflow: hidden;
+    width: 28px;
+}
+.pt1 {
+    background-position: -71px -180px;
+}
+.pt2 {
+    background-position: -100px -180px;
+}
+.pt3 {
+    background-position: -42px -180px;
+}
+.pt4 {
+    background-position: 0 -180px;
+    width: 41px;
+}
+#fov .tb-rows th, #fov01 .tb-rows th {
+    padding-left: 0;
+    text-align: center;
+}
+#fov, #fov .mc, #fov .tb-void, #fov01, #fov01 .mc, #fov01 .tb-void {
+    overflow: visible;
+}
+#fov .star, #fov01 .star {
+    float: none;
+    margin-bottom: 5px;
+}
+#fov .date, #fov01 .date {
+    color: #999999;
+}
+#fov .p-name, #fov01 .p-name {
+    height: auto;
+    width: 200px;
+}
+.subscr {
+    position: relative;
+    width: 100%;
+}
+.right .prompt-01 {
+    padding: 9px;
+    position: absolute;
+    width: 360px;
+    z-index: 9;
+}
+.right .prompt-01 .pb {
+    left: 330px;
+}
+.right .prompt-01 .pc {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #FFE6BC;
+    padding: 10px;
+}
+.right .prompt-01 .pc h5 {
+    border-bottom: 1px solid #E6E6E6;
+    line-height: 25px;
+}
+.right .prompt-01 .item {
+    margin-bottom: 10px;
+}
+.right .prompt-01 .item .check {
+    margin-top: 5px;
+}
+.right .prompt-01 .closer {
+    background: url("../images/icon.gif") repeat scroll -81px -41px transparent;
+    cursor: pointer;
+    height: 19px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    width: 19px;
+}
+.right .prompt-01 .label {
+    width: 70px;
+}
+.right .prompt-01 .form {
+    padding: 10px 0;
+}
+.operating {
+    padding: 24px 0;
+    width: 94px;
+}
+.operating li {
+    height: 22px;
+    line-height: 22px;
+    margin-bottom: 3px;
+    text-align: right;
+}
+.share, .storeinfo {
+    cursor: pointer;
+}
+.share {
+    position: relative;
+    width: 94px;
+}
+.storeinfo {
+    float: left;
+    width: 50px;
+}
+.share .fore, .storeinfo .fore {
+    color: #005EA7;
+    position: relative;
+    z-index: 0;
+}
+#fov .share .fore, #fov01 .share .fore {
+    height: auto;
+    left: 0;
+    margin-bottom: 0;
+    position: absolute;
+    text-align: center;
+    width: 94px;
+}
+#fov01 .share .fore {
+    left: 25px;
+}
+* + html #fov01 .share .fore {
+    left: 0;
+    top: 2px;
+}
+.storeinfo .fore {
+    padding: 0 2px;
+}
+.share .fore b, .storeinfo .fore b {
+    background: url("../images/keep.gif") repeat scroll -34px -65px transparent;
+    font-size: 0;
+    height: 3px;
+    line-height: 0;
+    margin-left: 3px;
+    overflow: hidden;
+    position: absolute;
+    width: 5px;
+}
+.share .fore b {
+    top: 9px;
+}
+.storeinfo .fore b {
+    top: 7px;
+}
+#fov .share.hover .fore, #fov01 .share.hover .fore {
+    height: 18px;
+    overflow: hidden;
+}
+#fov .share.hover .fore b, #fov .storeinfo.hover .fore b, #fov01 .share.hover .fore b, #fov01 .storeinfo.hover .fore b {
+    background-position: -34px -61px;
+    top: 10px;
+}
+#fov .storeinfo.hover .fore b, #fov01 .storeinfo.hover .fore b {
+    top: 5px;
+}
+#fov .hover, #fov01 .hover {
+    position: relative;
+    z-index: 1;
+}
+#fov .share.hover .fore, #fov .storeinfo.hover .fore, #fov01 .share.hover .fore, #fov01 .storeinfo.hover .fore {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #D7D8DA;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 0;
+}
+#fov .storeinfo.hover .fore, #fov01 .storeinfo.hover .fore {
+    width: 46px;
+}
+#fov .share.hover .fore, .i-store, #fov01 .share.hover .fore, .i-store {
+    width: 100%;
+}
+#fov-list .mt .i-store li {
+    color: #005EA7;
+    float: none;
+}
+#fov .hover ul, #fov01 .hover ul {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #D7D8DA;
+    border-image: none;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    left: 0;
+    position: absolute;
+}
+#fov01 .hover ul {
+    left: 25px;
+}
+* + html #fov01 .hover ul {
+    left: 0;
+}
+#fov .share.hover ul, #fov01 .share.hover ul {
+    position: absolute;
+    top: 19px;
+    width: 100%;
+}
+#fov .hover ul li, #fov01 .hover ul li {
+    margin: 0 5px;
+    text-align: left;
+}
+#fov .share.hover ul li s, #fov01 .share.hover ul li s {
+    background: url("i/keep.gif") repeat scroll 0 0 transparent;
+    float: left;
+    height: 16px;
+    margin-left: 10px;
+    margin-right: 4px;
+    margin-top: 2px;
+    width: 16px;
+}
+#fov .share.hover ul .fore1, #fov01 .share.hover ul .fore1 {
+    border-top: 1px solid #F2F2F2;
+    margin-top: 3px;
+    padding-top: 3px;
+}
+#fov .share.hover ul .fore1 s, #fov01 .share.hover ul .fore1 s {
+    background-position: 0 -44px;
+}
+#fov .share.hover ul .fore2 s, #fov01 .share.hover ul .fore2 s {
+    background-position: -17px -44px;
+}
+#fov .share.hover ul .fore3 s, #fov01 .share.hover ul .fore3 s {
+    background-position: -34px -44px;
+}
+#fov .share.hover ul .fore4 s, #fov01 .share.hover ul .fore4 s {
+    background-position: -51px -44px;
+}
+#fov .share.hover ul .fore5 s, #fov01 .share.hover ul .fore5 s {
+    background-position: -68px -44px;
+}
+#fov .share.hover ul .fore6 s, #fov01 .share.hover ul .fore6 s {
+    background-position: 0 -61px;
+}
+#fov .share.hover ul .fore7 s, #fov01 .share.hover ul .fore7 s {
+    background-position: -17px -61px;
+}
+.selected {
+    background: none repeat scroll 0 0 #FFFDEE;
+}
+.operating {
+    padding: 24px 0;
+    width: 94px;
+}
+#fov01 .operating {
+    width: 120px;
+}
+.operating li {
+    line-height: 22px;
+    padding-right: 20px;
+}
+.operating li.f1, .share li {
+    padding-right: 0;
+}
+#fov .extra .check, #fov01 .extra .check {
+    margin-top: 10px;
+}
+#fov .extra label, #fov01 .extra label {
+    margin-right: 10px;
+}
+#fov th .fl .check, #fov01 th .fl .check {
+    margin-top: 2px;
+}
+#fov .mb, #fov01 .mb {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border-top: 1px solid #E6E6E6;
+    padding: 8px 2px;
+}
+#fov .mb {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#fov .td-01, #fov01 .td-01 {
+    background: none repeat scroll 0 0 #E8FBE8;
+    padding-right: 2px;
+    text-align: right;
+}
+#fov .tb-rows td, #fov01 .tb-rows td {
+    padding-left: 5px;
+}
+#fov .fore, #fov01 .fore {
+    margin-bottom: 5px;
+}
+.list-x {
+    width: 100px;
+}
+#fov .fore, #fov01 .fore {
+    height: 17px;
+    margin-bottom: 3px;
+    overflow: hidden;
+}
+.list-x {
+    width: 100px;
+}
+.ftag {
+    color: #999999;
+    margin: 10px 0;
+    position: relative;
+    width: 200px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.ftag .prompt-01 {
+    left: 75px;
+    top: -12px;
+    width: 375px;
+}
+.right .ftag .pb {
+    left: -20px;
+}
+.ftag a.flk-03:hover {
+    color: #005EA7;
+}
+.right .ftag a strong {
+    font-family: "宋体";
+    font-weight: bold;
+    margin-right: 3px;
+}
+.ftag .text {
+    width: 337px;
+}
+.ftag .btn-11 {
+    margin-right: 10px;
+}
+#ebook p, #changgou, #changgou p {
+    margin-bottom: 10px;
+    text-align: center;
+}
+#ebook a.btn-add {
+    background: url("../images/btnnobuy.jpg") repeat scroll 0 0 transparent;
+    color: #333333;
+    display: block;
+    height: 21px;
+    line-height: 21px;
+    margin: 0 auto;
+    padding-left: 25px;
+    text-align: center;
+    width: 94px;
+}
+#changgou .btn {
+    margin: 0 5px;
+}
+.product_box {
+    background-color: #F0F0EE;
+    border: 1px solid #DDDDDD;
+    float: left;
+    margin: 0 auto 10px;
+    padding: 10px 8px;
+    width: 810px;
+}
+.product_box li {
+    float: left;
+    margin-right:50px;
+}
+#consult .item {
+    border-bottom: 1px dotted #DEDEDE;
+    padding: 8px 0;
+}
+#consult dl {
+    margin-top: 5px;
+    overflow: hidden;
+}
+#consult dt {
+    float: left;
+    text-align: justify;
+    width: 62px;
+}
+#consult dd {
+    float: right;
+    overflow: hidden;
+    width: 720px;
+}
+#consult .user {
+    color: #9C9A9C;
+    margin-top: 0;
+}
+#consult .user span {
+    margin-right: 20px;
+}
+#consult .answer {
+    color: #FF6500;
+}
+#consult .reply {
+    float: left;
+    width: 600px;
+}
+#consult .date-answer {
+    color: #9C9A9C;
+    float: right;
+    text-align: right;
+    width: 120px;
+}
+#consult .extra {
+    margin-top: 4px;
+}
+#consult .extra a {
+    color: #005AA0;
+}
+#consultation {
+    cursor: pointer;
+}
+#consult .total {
+    float: right;
+}
+#consult .total span {
+    color: #9C9A9C;
+}
+#consult .contact {
+    float: left;
+}
+#consult .search-result-item .user, .search-result-item .useful {
+    text-align: right;
+}
+#consult .user .date-ask {
+    margin-right: 0;
+}
+#consult-result {
+    overflow: hidden;
+}
+#consult .result {
+    background: none repeat scroll 0 0 #F4F9FF;
+    padding: 5px 20px;
+}
+#consult .result strong {
+    color: #FF3300;
+}
+#consult .result em {
+    color: #D75509;
+}
+#consult .result a {
+    color: #005AA0;
+}
+.ask dt {
+    background: url("../images/refer_item_03.gif") no-repeat scroll 0 2px transparent;
+    padding-left: 17px;
+}
+.answer {
+    color: #FF7403;
+}
+.answer dt {
+    background: url("../images/refer_item_06.gif") no-repeat scroll 0 2px transparent;
+    padding-left: 17px;
+}
+.button01 {
+    background: url("../images/btn.gif") no-repeat scroll -150px 0 transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    height: 25px;
+    vertical-align: middle;
+    width: 70px;
+}
+.button01:hover {
+    background: url("../images/btn.gif") no-repeat scroll -150px -50px transparent;
+}
+.button02 {
+    background: url("../images/btn.gif") no-repeat scroll -150px -200px transparent;
+    border: 0 none;
+    color: #CC0000;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    height: 25px;
+    vertical-align: middle;
+    width: 70px;
+}
+.button02:hover {
+    background: url("../images/btn.gif") no-repeat scroll -150px -250px transparent;
+}
+.btn_gray {
+    background-color: #A6A5A5;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+}
+.btn_blue {
+    background-color: #3399FF;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+}
+.buttonbox {
+    height: 40px;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    width: 200px;
+}
+.form ul li {
+    line-height: 30px;
+}
+.form ul li label {
+    display: inline-block;
+    width: 150px;
+}
+

@@ -1,0 +1,68 @@
+﻿body, h1, h2, h3, h4, h5, h6,h7,img, p, dl, dt, dd, ol, ul, li,tr, th, td {
+	margin: 0;
+	padding: 0;
+}
+ol, ul {list-style: none;}
+img { border: 0 none;}
+.logininput{
+	border: 1px solid #bbddf8;
+	vertical-align: middle;
+	-moz-border-radius: 2px 2px 2px 2px;
+    padding:3px;	
+	background-color: #fff;
+}
+
+
+.stitle {
+    margin-bottom:5px; 
+	color: #017CC8; 
+	font-size:19px; 
+	font-weight:bold; 
+	font-family:微软雅黑; 
+	letter-spacing:2px;
+}
+
+.supertitle {
+    border-bottom: 2px solid #017CC8;
+    margin-bottom: 5px;
+}
+
+
+/*注册*/
+.tologin{ margin-top:5px;}
+.reg_boxnew{ border:1px solid #bbddf8; width:450px; padding:35px 40px; float:left; font-size:14px; float:left;}
+
+/*忘记密码*/
+.getpw {margin: 70px auto; width: 50%; font-size:14px;}
+.reg_boxnew .name{ color:#0094ff; line-height:40px;}
+.reg_boxnew ul li{ height:40px; line-height:40px;}
+.reg_boxnew label{ width:100px; display:inline-block;}
+
+.login_title { border-bottom:1px solid #bbddf8; margin-bottom:10px; padding:10px 0;color: #017CC8; font-size:19px; font-weight:bold; font-family:微软雅黑; letter-spacing:2px;}
+
+.btn_login_box { margin-left:100px;}
+
+.login_bottom { border-top:1px solid #bbddf8; margin-top:20px; padding:10px 0;}
+.login_bottom a { color:#09C; text-decoration:underline;}
+.info_righbox { float:left; margin-left:20px; font-size:14px; width:400px;}
+.info_righbox img { border:1px solid #bbddf8; padding:5px; margin-top:10px;}
+.info_righbox img:hover {  border:1px solid #ccc;}
+/*注册css*/
+.reg_box {
+    border: 1px solid #bbddf8;
+    margin: 0 auto;
+    padding: 20px;
+}
+.regterm {
+    border-top: 1px dotted #bbddf8;
+    clear: both;
+    height: 30px;
+    line-height: 30px;
+}
+.frontform {
+    border: 1px solid #0D9C04;
+    border-radius: 3px 3px 3px 3px;
+    margin: 5px auto;
+    min-height: 400px;
+    padding: 10px 30px;
+}

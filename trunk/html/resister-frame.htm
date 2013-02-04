@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>  
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<meta http-equiv="Cache-Control" content="no-store"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta content="index" name="menu" />
+	<link href="favicon.ico" rel="SHORTCUT ICON" />
+	<link href= "favicon.ico" rel= "Bookmark">
+	<link href="css/regist-frame.css" rel="stylesheet" type="text/css">
+	<link href="css/reg.css" rel="stylesheet" type="text/css">
+	<title>东方农机商城</title>
+
+</head>
+<body>
+<form onsubmit="return false;" method="post" id="formloginframe">
+    <input type="hidden" value="pinLogin" id="loginType">
+
+    <div id="regist">
+        <div class="mt">
+            <ul class="tab">
+                <li class="curr">登&nbsp;录</li>
+            </ul>
+        </div>
+        <div id="" class="mc form">
+            <div class="item">
+                <span class="label">账户名：</span>
+                <div class="fl">
+                    <input type="text" autocomplete="off" class="text"  onfocus="if(this.value=='用户名/邮箱/已验证手机'){this.value='';this.style.color='#333'}" onblur="if(this.value==''){this.value='用户名/邮箱/已验证手机';this.style.color='#999'}" tabindex="1" name="loginname" id="loginname">
+                    <label class="blank invisible" id="loginname_succeed"></label>
+                    <span class="clr"></span>
+                    <label id="loginname_error"></label>
+                </div>
+            </div>
+            <div class="item">
+                <span class="label">密码：</span>
+
+                <div class="fl">
+                    <input type="password" autocomplete="off" onfocus="preCheck();" tabindex="2" class="text" name="loginpwd" id="loginpwd">
+                    <label class="blank invisible" id="loginpwd_succeed"></label>
+                    <label><a class="flk13" target="_blank" href="http://safe.360buy.com/findPwd/index.action">找回密码</a></label>
+                    <span class="clr"></span>
+                    <label id="loginpwd_error"></label>
+                </div>
+            </div>
+            <div id="autoentry" class="item">
+                <span class="label">&nbsp;</span>
+                <div class="fl">
+                    <label class="mar"><input type="checkbox" name="chkRememberUsername" id="chkRememberUsername" checked="checked" class="checkbox">
+                        记住账户名</label>
+                    <label id="safety"><input type="checkbox" name="chkRememberMe" id="chkRememberMe" class="checkbox">
+                        自动登录</label>
+                </div>
+            </div>
+            <div class="item">
+                <span class="label">&nbsp;</span>
+                <input type="button" tabindex="8" value="登&nbsp;录" id="loginsubmitframe" class="btn-img btn-regist mar" clstag="login|keycount|5|3">
+                <label class="ftx23">&nbsp;&nbsp;&nbsp;&nbsp;新用户?<a onclick="window.parent.jdModelCallCenter.regist();" class="flk13" href="javascript:void(0)">立即注册</a></label>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+
+</body>
+</html>

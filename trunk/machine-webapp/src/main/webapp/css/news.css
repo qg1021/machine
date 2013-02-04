@@ -1,0 +1,495 @@
+
+.left {
+    float: left;
+    width: 211px;
+}
+.right-extra {
+    float: right;
+    width: 769px;
+}
+#categorys .mc {
+    display: block;
+}
+#brand {
+    margin-top: 430px;
+    overflow: visible;
+    position: relative;
+}
+#brand .mt {
+    background: url("../images/bg_tit_home.gif") no-repeat scroll 0 -30px #E6E6E6;
+    height: 24px;
+    line-height: 24px;
+    overflow: visible;
+    padding: 3px 8px;
+}
+#brand h2 {
+    float: left;
+}
+#brand .mt .extra {
+    float: right;
+}
+#brand .mc {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #E6E6E6;
+    border-image: none;
+    border-style: solid;
+    border-width: 0 1px 1px;
+}
+#brand ul {
+    overflow: hidden;
+    padding: 0 0 8px 8px;
+    width: 201px;
+}
+#brand li {
+    border: 1px solid #EFEFEF;
+    float: left;
+    height: 31px;
+    margin: 8px 8px 0 0;
+    overflow: hidden;
+    padding: 1px;
+    width: 88px;
+}
+#brand li img {
+    height: 31px;
+    width: 88px;
+}
+#brand .mc .extra {
+    padding: 5px 8px;
+    text-align: right;
+}
+#brand .mc .extra a {
+    color: #005AA0;
+}
+#ibrand {
+    position: absolute;
+    right: 10px;
+    top: 3px;
+}
+#ibrand div {
+    display: none;
+    left: -14px;
+    position: absolute;
+    top: 0;
+    z-index: 12;
+}
+#ibrand dl, #ibrand dt, #ibrand dd {
+    background-image: url("../images/shadow20100415.gif");
+    background-repeat: no-repeat;
+    width: 315px;
+}
+#ibrand dl {
+    background-position: left bottom;
+}
+#ibrand dt {
+    background-position: right -36px;
+    height: 6px;
+    margin-left: 1px;
+    overflow: hidden;
+    padding: 0 4px 0 15px;
+    position: relative;
+}
+#ibrand dd {
+    background-position: right bottom;
+    margin-left: 15px;
+    overflow: hidden;
+    padding: 0 5px 10px 0;
+    position: relative;
+}
+#ibrand dd em {
+    background: url("../images/shadow20100415.gif") no-repeat scroll -489px -2px transparent;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 0 5px 0 10px;
+    width: 90px;
+}
+#ibrand:hover div, #brand .hover div {
+    display: block;
+}
+#jdzone {
+    border: 1px solid #E6E6E6;
+    overflow: visible;
+}
+#jdzone .mt {
+    padding: 5px 8px;
+}
+#jdzone .mc {
+    padding: 0 8px 5px;
+}
+#jdzone .mc .extra {
+    margin-top: 5px;
+    text-align: right;
+}
+#jdzone .mc .extra a {
+    color: #005AA0;
+}
+#detail {
+    border: 1px solid #EBEBEB;
+    padding: 15px 30px 0;
+    min-height:403px;
+}
+#detail h1 {
+    border-bottom: 1px solid #EBEBEB;
+    font-family: "microsoft yahei",宋体;
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    text-align: center;
+}
+#detail .summary {
+    color: #999999;
+    text-align: center;
+}
+#detail .mc {
+    font-size: 14px;
+    line-height: 2em;
+    padding: 30px 10px;
+}
+#detail .mt {
+    padding-bottom: 2px;
+    position: relative;
+}
+#detail .partake {
+    bottom: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+}
+#detail .partake span {
+    float: left;
+    line-height: 23px;
+}
+#detail .partake a {
+    background-image: url("../images/icon_site.gif");
+    background-repeat: no-repeat;
+    float: left;
+    height: 23px;
+    line-height: 100px;
+    overflow: hidden;
+    width: 22px;
+}
+a#site-qzone:link, a#site-qzone:visited {
+    background-position: 0 -24px;
+}
+a#site-qzone:hover, a#site-qzone:active {
+    background-position: 0 0;
+}
+#site-douban:link, #site-douban:visited {
+    background-position: -24px -24px;
+}
+#site-douban:hover, #site-douban:active {
+    background-position: -24px 0;
+}
+#site-renren:link, #site-renren:visited {
+    background-position: -47px -24px;
+}
+#site-renren:hover, #site-renren:active {
+    background-position: -47px 0;
+}
+#site-kaixing:link, #site-kaixing:visited {
+    background-position: -70px -24px;
+}
+#site-kaixing:hover, #site-kaixing:active {
+    background-position: -70px 0;
+}
+#site-sina:link, #site-sina:visited {
+    background-position: -93px -24px;
+}
+#site-sina:hover, #site-sina:active {
+    background-position: -93px 0;
+}
+#site-email:link, #site-email:visited {
+    background-position: -116px -24px;
+}
+#site-email:hover, #site-email:active {
+    background-position: -116px 0;
+}
+a#site-qqmsn:link, a#site-qqmsn:visited {
+    background-position: -139px -24px;
+    width: 51px;
+}
+a#site-qqmsn:hover, a#site-qqmsn:active {
+    background-position: -139px 0;
+    width: 51px;
+}
+#comment {
+    border: 1px solid #E6E6E6;
+}
+#comment .mt {
+    background: url("../images/bg_shortcut.gif") repeat-x scroll 0 -134px #FFFFFF;
+    height: 24px;
+    line-height: 24px;
+    padding: 3px 8px;
+}
+#comment .mt h2 {
+    float: left;
+}
+#comment .mt .extra {
+    float: right;
+    overflow: hidden;
+    width: 170px;
+}
+#comment .mt .btn-pub {
+    background: url("../images/icon_clubs.gif") no-repeat scroll 0 -400px transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    float: right;
+    height: 23px;
+    margin-left: 5px;
+    text-align: center;
+    width: 67px;
+}
+#comment .mt strong {
+    color: #FF6600;
+    padding: 0 5px;
+}
+#comment .mc {
+    padding: 4px 0 0;
+}
+#comment .item {
+    border-top: 1px solid #E0E0E0;
+}
+#comment .user {
+    background: none repeat scroll 0 0 #F7F7F7;
+    height: 20px;
+    line-height: 20px;
+    padding: 5px 15px;
+}
+#comment .content {
+    padding: 10px 15px;
+}
+#comment .u-name {
+    color: #005AA0;
+    float: left;
+    width: 200px;
+}
+#comment .u-level {
+    color: #999999;
+    float: left;
+    text-align: right;
+    width: 380px;
+}
+#comment .date-ask {
+    color: #999999;
+    float: right;
+}
+#comment-page {
+    border-top: 1px solid #E0E0E0;
+    padding: 10px;
+}
+#pub-comment {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #E6E6E6;
+    border-image: none;
+    border-style: solid;
+    border-width: 0 1px 1px;
+}
+#pub-comment .mt {
+    background: url("../images/bg_shortcut.gif") repeat-x scroll 0 -134px #FFFFFF;
+    height: 24px;
+    line-height: 24px;
+    padding: 3px 8px;
+}
+#pub-comment .mc {
+    padding: 20px 30px;
+}
+#pub-comment .item {
+    overflow: hidden;
+    padding: 5px 0;
+}
+#pub-comment .label {
+    text-align: right;
+    width: 50px;
+}
+#pub-comment .area {
+    height: 80px;
+    padding: 4px;
+    width: 400px;
+}
+#pub-comment .btn-submit {
+    background: url("../images/icon_clubs.gif") no-repeat scroll 0 -400px transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 23px;
+    width: 67px;
+}
+#product-track .nothing {
+    margin-top: 100px;
+    text-align: center;
+}
+#product-track .iloading {
+    margin-top: 100px;
+}
+#product-track .m2 h2 {
+    font: bold 14px/28px simsun;
+    padding: 0 8px;
+}
+#product-track .left .m2 .mt {
+    background: url("../images/newicon20120718.png") repeat-x scroll 0 -287px transparent;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 0 none;
+    height: 28px;
+    line-height: 28px;
+}
+#product-track .m2 {
+    border: 1px solid #CCCCCC;
+}
+#product-track .left {
+    float: left;
+    width: 210px;
+}
+#product-track .right {
+    float: right;
+}
+#product-track {
+    margin-top: 10px;
+}
+#product-track .right {
+    width: 780px;
+}
+#recent-view-track .mc ul {
+    height: 250px;
+    overflow-y: auto;
+}
+#recent-view-track h2 {
+    float: left;
+    font-size: 14px;
+}
+#recent-view-track .extra {
+    font-size: 12px;
+    margin-right: 10px;
+}
+#recent-view-track ul {
+    margin-top: -1px;
+    padding: 0 8px;
+}
+#recent-view-track li {
+    border-top: 1px dotted #DEDEDE;
+    overflow: hidden;
+}
+#recent-view-track .p-img {
+    float: left;
+    height: 50px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 50px;
+}
+#recent-view-track .p-name {
+    float: left;
+    height: 3em;
+    margin-top: 5px;
+    width: 120px;
+}
+#recent-view-track .p-price {
+    float: left;
+    width: 120px;
+}
+#recent-view-track .no-track {
+    background: url("../images/foot.png") no-repeat scroll left bottom transparent;
+    color: #999999;
+    height: 230px;
+    margin: 10px;
+}
+#recent-view-track .no-track p {
+    line-height: 1.5em;
+    margin-top: 5px;
+}
+#recent-view-track .no-track h4 {
+    font: 18px microsoft yahei;
+}
+#product-track #maybe-like {
+    border-left: 0 none;
+}
+#maybe-like .mt {
+    background: url("../images/newicon20120718.png") repeat-x scroll 0 -287px transparent;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 0 none;
+    height: 28px;
+}
+#maybe-like h2 {
+    float: left;
+    font-size: 14px;
+}
+#maybe-like .extra {
+    font-size: 12px;
+    margin-right: 10px;
+}
+#maybe-like .extra span {
+    background: none repeat scroll 0 0 #999999;
+    border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    height: 16px;
+    line-height: 16px;
+    margin: 5px 0 0 5px;
+    padding: 0 4px;
+}
+#maybe-like .extra .curr {
+    background: none repeat scroll 0 0 #DD0000;
+}
+#maybe-like .extra {
+    float: right;
+    font-size: 14px;
+}
+#maybe-like .mc, #recent-view-track .mc {
+    height: 250px;
+    overflow: hidden;
+}
+#maybe-like .p-comm .star {
+    margin-top: 2px;
+}
+.star {
+    background-image: url("../images/newicon20120718.png");
+    background-repeat: no-repeat;
+}
+#maybe-like .mc li {
+    padding: 10px 27px;
+    text-align: center;
+    width: 133px;
+}
+#maybe-like .mc .p-name {
+    height: 3em;
+}
+.star {
+    display: inline-block;
+    height: 14px;
+    width: 75px;
+}
+.sa5 {
+    background-position: -109px -239px;
+}
+.sa4 {
+    background-position: -124px -239px;
+}
+.sa3 {
+    background-position: -139px -239px;
+}
+.sa2 {
+    background-position: -154px -239px;
+}
+.sa1 {
+    background-position: -169px -239px;
+}
+.sa0 {
+    background-position: -184px -239px;
+}
+.root61 .right-extra {
+    width: 989px;
+}
+.root61 #maybe-like .mc li {
+    width: 144px;
+}
+.root61 #product-track .right {
+    width: 1000px;
+}

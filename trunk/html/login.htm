@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>  
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<meta http-equiv="Cache-Control" content="no-store"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta content="index" name="menu" />
+	<link href="favicon.ico" rel="SHORTCUT ICON" />
+	<link href= "favicon.ico" rel= "Bookmark ">
+	<link href="css/passport.css" rel="stylesheet" type="text/css" /> 
+	<link href="css/regist.css" rel="stylesheet" type="text/css" />
+	<title>东方农机商城登录</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+
+</script>
+	 
+
+</head>
+<body>
+<div id="shortcut">
+		<div class="w">
+			<ul class="fl lh">
+				<li clstag="homepage|keycount|home2012|01a" class="fore1 ld"><b></b><a href="javascript:addToFavorite()">收藏</a> </li>
+				<li clstag="homepage|keycount|home2012|01b" class="fore2"><a target="_blank" href="http://www.360top.com/">设为首页</a> </li>
+			</ul>
+			<ul class="fr lh">
+				<li clstag="homepage|keycount|home2012|01e" class="fore1 ld" id="loginbar">您好，欢迎来到东方农机商城！<span><a href="javascript:login();">[登录]</a> <a class="link-regist" href="javascript:regist();">[免费注册]</a></span></li>
+				<li clstag="homepage|keycount|home2012|01f" class="fore2"><a href="http://jd2008.360buy.com/JdHome/OrderList.aspx">我的订单</a> </li>
+				<!--<li clstag="homepage|keycount|home2012|01h" class="fore4"><a target="_blank" href="http://app.360buy.com/">手机京东</a> </li>-->
+				  <li data-widget="dropdown" clstag="homepage|keycount|home2012|01j" class="fore6 menu">
+					  <dl>
+						<dt class="ld"><a target="_blank" href="http://help.360buy.com/">客户服务<b></b></a></dt>
+						<dd>
+						<div><a target="_blank" href="http://help.360buy.com/help/question-61.html">常见问题</a></div>
+						<div><a target="_blank" href="http://myjd.360buy.com/repair/orderlist.action">售后服务</a></div>
+						<div><a target="_blank" href="http://chat.360buy.com/jdchat/custom.action">在线客服</a></div>
+						<div><a target="_blank" href="http://myjd.360buy.com/opinion/list.action">投诉中心</a></div>
+						<div><a target="_blank" href="http://www.360buy.com/contact/service.html">客服邮箱</a></div></dd>
+					  </dl>
+				  </li>
+			</ul>
+			<span class="clr"></span>
+		</div>
+	</div>
+	<div id="header" class="w">
+		<div id="logo" class="ld">
+			<a href="new-index.htm" clstag="homepage|keycount|home2012|02a"><b></b>
+			<img alt="东方农机商城" src="images/logo.png" width="259"></a>
+		</div><!--logo end-->
+	</div><!--header end-->
+	<form onsubmit="return false;" method="post" id="formlogin">
+    <div id="entry" class="w">
+        <div class="mt"><h2>用户登录</h2><b></b></div>
+        <div style="padding-top:20px;" class="mc">
+            <div class="form"><div class="item"><span class="label">账户名：</span><div class="fl">
+                        <input type="text" autocomplete="off" class="text" value="qg1019" onfocus="if(this.value=='用户名/邮箱/已验证手机'){this.value='';this.style.color='#333'}" onblur="if(this.value==''){this.value='用户名/邮箱/已验证手机';this.style.color='#999'}" tabindex="1" name="loginname" id="loginname">
+                        <label class="blank invisible" id="loginname_succeed"></label>
+                        <span class="clr"></span>
+                        <label id="loginname_error"></label>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label">密码：</span>
+                    <div class="fl">
+                        <input type="password" autocomplete="off" onfocus="preCheck();" tabindex="2" class="text" name="loginpwd" id="loginpwd">
+                        <label class="blank invisible" id="loginpwd_succeed"></label>
+                        <label><a class="flk13" href="http://safe.360buy.com/findPwd/index.action">找回密码</a></label>
+                        <span class="clr"></span>
+                        <label id="loginpwd_error"></label>
+                    </div>
+                </div>
+                <div id="o-authcode" class="item  hide ">
+                    <span class="label">验证码：</span>
+                    <div class="fl">
+                        <input type="text" autocomplete="off" tabindex="6" class="text text-1" name="authcode" id="authcode">
+                        <label class="img">
+                            <img id="JD_Verification1" ver_colorofnoisepoint="#888888" onclick="this.src='../verify/image?a=1&amp;uid=dc989bcf-6ab8-46b0-a2ef-e21ed3577e1c&amp;yys='+new Date().getTime()" src2="../verify/image?a=1&amp;uid=dc989bcf-6ab8-46b0-a2ef-e21ed3577e1c" style="cursor:pointer;width:100px;height:26px;display:block;">
+                        </label>
+                        <label class="ftx23">&nbsp;看不清？<a class="flk13" onclick="jQuery('#JD_Verification1').click();" href="javascript:void(0)">换一张</a></label>
+                        <label class="blank invisible" id="authcode_succeed"></label>
+                        <span class="clr"></span>
+                        <span id="authcode_error"></span>
+                    </div>
+                </div>
+                <div id="autoentry" class="item">
+                    <span class="label">&nbsp;</span>
+                    <div class="fl safety">
+                        <label class="mar"><input type="checkbox" name="chkRememberUsername" id="chkRememberUsername" checked="checked" class="checkbox">
+                            <label class="mar-b">记住账户名</label>
+                        </label>
+                        <label class="mar" id="safety"><input type="checkbox" name="chkRememberMe" id="chkRememberMe" class="checkbox">
+                            <label class="mar-b">自动登录</label></label>
+                        <div style="display: none;" class="promat">
+                            为了账户安全，建议您在个人电脑使用此功能
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label">&nbsp;</span>
+                    <input type="button" tabindex="8" value="登录" id="loginsubmit" class="btn-img btn-entry">
+                </div>
+            </div>
+            <div id="guide"><h5>还不是东方农机商城用户？</h5>
+			<div class="content">现在免费注册成为东方农机商城用户，便能立刻享受便宜又放心的购物乐趣。</div>
+			<a class="btn-link btn-personal" href="reg.htm">注册新用户</a>
+			</div>
+            <span class="clr"></span>
+        </div>
+    </div>
+	</form>
+<div class="w w1">	
+	<SPAN class="clr"></SPAN>
+	<div id="footer">
+		<div class="links">
+			<a target="_blank" href="http://www.360buy.com/intro/about.aspx">关于我们</a>|
+			<a target="_blank" href="http://www.360buy.com/contact/">联系我们</a>|
+			<a target="_blank" href="http://www.360buy.com/intro/service.aspx">广告服务</a>|
+			<a target="_blank" href="http://club.360buy.com/links.aspx">友情链接</a>|
+			<a target="_blank" href="http://club.360buy.com/links.aspx">网站地图</a>
+		</div>
+		<div class="copyright"> Copyright&copy;2012  machine1688东方农机商城 版权所有</div>
+		<div class="authentication">
+			<a target="_blank" href="http://net.china.com.cn">
+				<img width="108" height="40"  src="images/report.gif" class="err-product">
+			</a>
+			<a target="_blank" href="http://maanshan.cyberpolice.cn/">
+				<img width="108" height="40" alt="马鞍山网络警察" src="images/110.gif" class="err-product">
+			</a>
+			<a target="_blank" href="https://search.szfw.org/cert/l/CX20120111001803001836">
+				<img width="112" height="40" src="http://img13.360buyimg.com/da/20120221/112_40_WvArIl.png" class="err-product">
+			</a>
+			<br/>
+			<img src="images/icp.gif" class="err-product">皖ICP证070359号
+		</div>
+	</div>
+	</div>
+	<SCRIPT type="text/javascript" src="js/base-v1.js"></SCRIPT>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>
